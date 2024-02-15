@@ -38,6 +38,14 @@ void DisplayEdges(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     std::vector<float> vertices;
     std::vector<unsigned int> indices;
 
+
+    vertices.clear();
+    indices.clear();
+
+    Vector offset = Vector(0,0,0);
+    Affine obj2world = Trans(center - O) * R * Trans(offset) * Scale(scale * m_size);
+    Matrix obj2dev = PerspectiveProjection(Proj) * obj2world;
+
     // Transform all vertices and prepare for drawing
     for (int i = 0; i < m.VertexCount(); ++i) {
         Point transformedVertex = Proj * A * m.GetVertex(i);
