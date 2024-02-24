@@ -132,7 +132,7 @@
   <ItemGroup>
     <ClCompile Include="Affine.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
-    <ClCompile Include="sphere_wireframe.cpp" />
+    <ClCompile Include="sphere_solid.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affine.h" />

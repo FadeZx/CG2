@@ -15,9 +15,11 @@ GLuint VBO, EBO, VAO;
 
 
 vector<Point> temp_verts;
+vector<Point> face_indices;
 
 vector<float> vertices;
 vector<unsigned int> indices;
+vector<unsigned int> faces;
 vector<float> colors;
 
 
@@ -107,7 +109,40 @@ void DisplayEdges(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     glDisableClientState(GL_COLOR_ARRAY);
 }
 
-void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& color);
+void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& color)
+{
+    vertices.clear();
+    indices.clear();
+    colors.clear();
+
+    temp_verts.resize(m.EdgeCount());
+    Matrix obj2dev = Proj * A;
+
+
+    // Transform all vertices and prepare for drawing
+    for (int i = 0; i < m.VertexCount(); ++i) {
+        Hcoords v = obj2dev * m.GetVertex(i);
+        temp_verts[i] = (1.0f / v.w) * v;
+    }
+
+    // Prepare indices for edges
+    for (int j = 0; j < m.EdgeCount(); ++j) {
+        const Point& P = temp_verts[m.GetEdge(j).index1],
+            Q = temp_verts[m.GetEdge(j).index2];
+        AddLineSegment(P, Q, color, vertices, indices, colors);
+    }
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+
+    glVertexPointer(3, GL_FLOAT, 0, vertices.data());
+    glColorPointer(3, GL_FLOAT, 0, colors.data());
+
+    glDrawElements(GL_LINES, indices.size(), GL_UNSIGNED_INT, indices.data());
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
+}
 
 
 #endif
