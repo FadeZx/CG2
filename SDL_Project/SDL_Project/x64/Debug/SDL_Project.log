@@ -1,8 +1,12 @@
 ﻿  sphere_solid.cpp
-E:\Project\CG2\SDL_Project\SDL_Project\DT285_Drawing.h(75,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\DT285_Drawing.h(144,77): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(68,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(75,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(76,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(77,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  SDL_Project.vcxproj -> E:\Project\CG2\SDL_Project\x64\Debug\SDL_Project.exe
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Drawing.h(77,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'sphere_solid.cpp')
+  
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Drawing.h(146,42): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  (compiling source file 'sphere_solid.cpp')
+  
+C:\Capt\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(68,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(75,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(76,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\sphere_solid.cpp(77,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  SDL_Project.vcxproj -> C:\Capt\CG2\SDL_Project\x64\Debug\SDL_Project.exe

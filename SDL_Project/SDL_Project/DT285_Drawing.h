@@ -15,11 +15,13 @@ GLuint VBO, EBO, VAO;
 
 
 vector<Point> temp_verts;
+vector<Point> transformed_verts;
 vector<Point> face_indices;
 
 vector<float> vertices;
 vector<unsigned int> indices;
 vector<unsigned int> faces;
+
 vector<float> colors;
 
 
@@ -151,50 +153,68 @@ float magnitude(const Vector& v) {
     return std::sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
 }
 
+
+
 void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& color)
 {
     vertices.clear();
     indices.clear();
     colors.clear();
-    temp_verts.resize(m.EdgeCount());
+    temp_verts.resize(m.VertexCount());
+    transformed_verts.resize(m.VertexCount());
+  
     Matrix obj2dev = Proj * A;
-
     Vector lightDir(0, 0, 1); // Ensure this direction is correct for your scene
-    Vector viewVector(0, 0, 3); // Assuming the camera is looking towards the negative z-axis
+    Point camPos(0, 0, 3); // Assuming the camera is looking towards the negative z-axis
 
-    // Transform all vertices and prepare for drawing
+    // Transform all vertices for lighting calculations
     for (int i = 0; i < m.VertexCount(); ++i) {
-        Hcoords v = obj2dev * m.GetVertex(i);
-        temp_verts[i] = (1.0f / v.w) * v;
+        temp_verts[i] = A * m.GetVertex(i);
     }
+
 
     // Prepare indices for edges
     for (int j = 0; j < m.FaceCount(); ++j) {
-        const Point& P = temp_verts[m.GetFace(j).index1],
-            Q = temp_verts[m.GetFace(j).index2],R = temp_verts[m.GetFace(j).index3];
-
         Mesh::Face face = m.GetFace(j);
 
-        // Calculate face normal for backface culling
-        Vector normal = cross(
-            temp_verts[face.index2] - temp_verts[face.index1],
-            temp_verts[face.index3] - temp_verts[face.index1]
-        );
+        const Point& P1 = temp_verts[face.index1];
+        const Point& Q1 = temp_verts[face.index2];
+        const Point& R1 = temp_verts[face.index3];
 
+        // Calculate face normal for backface culling
+        Vector normal = cross(Q1 - P1,R1 - P1);
+        normal.Normalize();
+
+        Vector viewVector = P1 - camPos; // Vector from camera position to a point on the face
+  
+        viewVector.Normalize();
+    
        
         // Backface culling check
-        if (dot(normal, viewVector) <= 0) {
+        if (dot(normal, viewVector) > 0) {
             continue;
         }
 
+        lightDir.Normalize();
         // Calculate the diffuse lighting component
         float dotProduct = dot(lightDir, normal);
-        float diffuse = std::max(dotProduct, 0.0f);
+        float diffuse = dotProduct / abs(lightDir) * abs(normal);
  
         Vector finalColor = diffuse * color;
- 
+        
+        // Transform the vertices for rendering
+        Hcoords transformedP = Proj * temp_verts[face.index1];
+        Hcoords transformedQ = Proj * temp_verts[face.index2];
+        Hcoords transformedR = Proj * temp_verts[face.index3];
+
+        const Point& P = (1.0f / transformedP.w) * transformedP;
+        const Point& Q = (1.0f / transformedQ.w) * transformedQ;
+        const Point& R = (1.0f / transformedR.w) * transformedR;
+
         FillFace(P, Q,R, finalColor, vertices, indices, colors);
     }
+
+
 
     glLineWidth(1); // Not work with filling, 1 for consistency
     glEnableClientState(GL_VERTEX_ARRAY);

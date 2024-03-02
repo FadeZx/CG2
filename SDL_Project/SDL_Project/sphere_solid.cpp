@@ -71,7 +71,7 @@ void Draw(void) {
                 snub_scale / snub.Dimensions().z)
             * Trans(O - snub.Center());
 
-        float cycleSpeed = 2.0f; // Adjust for faster or slower color changes
+        float cycleSpeed = 1.5f; // Adjust for faster or slower color changes
         float r = (sin(cycleSpeed * current_time) + 1.0f) / 2.0f; // Red component
         float g = (sin(cycleSpeed * current_time + 2.0f * PI / 3.0f) + 1.0f) / 2.0f; // Green component, phase shifted
         float b = (sin(cycleSpeed * current_time + 4.0f * PI / 3.0f) + 1.0f) / 2.0f; // Blue component, phase shifted
