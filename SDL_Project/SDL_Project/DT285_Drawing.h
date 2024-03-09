@@ -8,6 +8,7 @@
 #include "Affine.h"
 #include "Mesh.h"
 #include <vector>
+#include <GL/glew.h>    
 
 using namespace std;
 
@@ -56,7 +57,7 @@ void AddLineSegment(const Point& start, const Point& end,const Vector& color,
     vector<float>& vertices, vector<unsigned int>& indices, vector<float>& colors) {
    
 
-
+       int startIndex = static_cast<unsigned int>(vertices.size() / 3) ;
 
     // Add start and end points to the vertices list
     vertices.push_back(start.x);
@@ -74,7 +75,7 @@ void AddLineSegment(const Point& start, const Point& end,const Vector& color,
     }
 
     // Add indices for this line segment
-     int startIndex = vertices.size() / 3; // 3 components (x, y, z) per vertex
+  
     indices.push_back(startIndex);
     indices.push_back(startIndex + 1);
 }
@@ -84,7 +85,7 @@ void FillFace(const Point& p1, const Point& p2, const Point& p3, const Vector& c
     vector<float>& vertices, vector<unsigned int>& indices, vector<float>& colors) {
 
 
-
+    unsigned int baseIndex = static_cast<unsigned int>(vertices.size() / 3);
         // Add vertices to the vertex data array
         vertices.push_back(p1.x);
         vertices.push_back(p1.y);
@@ -106,7 +107,7 @@ void FillFace(const Point& p1, const Point& p2, const Point& p3, const Vector& c
         }
 
         // Add indices for this face
-        unsigned int baseIndex = static_cast<unsigned int>(vertices.size() / 3) - 3;
+        
         indices.push_back(baseIndex);
         indices.push_back(baseIndex + 1);
         indices.push_back(baseIndex + 2);
@@ -120,8 +121,10 @@ void DisplayEdges(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     indices.clear();
     colors.clear();
    
-    temp_verts.resize(m.EdgeCount());
+    temp_verts.resize(m.VertexCount());
     Matrix obj2dev = Proj * A ;
+
+
 
 
     // Transform all vertices and prepare for drawing
@@ -131,7 +134,7 @@ void DisplayEdges(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     }
 
     // Prepare indices for edges
-    for (int j = 0; j < m.EdgeCount(); ++j) {
+    for (int j = 0; j < m.EdgeCount(); j++) {
         const Point& P = temp_verts[m.GetEdge(j).index1],
             Q = temp_verts[m.GetEdge(j).index2];
         AddLineSegment(P, Q,color, vertices, indices,colors);

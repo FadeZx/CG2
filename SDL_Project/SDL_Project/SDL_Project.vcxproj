@@ -131,11 +131,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Affine.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CubeMesh.cpp" />
+    <ClCompile Include="DT285_simple_cube.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
-    <ClCompile Include="sphere_solid.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affine.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CubeMesh.h" />
     <ClInclude Include="DT285_Drawing.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="SnubDodecMesh.h" />

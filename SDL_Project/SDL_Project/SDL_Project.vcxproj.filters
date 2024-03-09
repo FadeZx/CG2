@@ -21,7 +21,13 @@
     <ClCompile Include="SnubDodecMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sphere_solid.cpp">
+    <ClCompile Include="CubeMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DT285_simple_cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,13 +35,19 @@
     <ClInclude Include="Affine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DT285_Drawing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SnubDodecMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DT285_Drawing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
