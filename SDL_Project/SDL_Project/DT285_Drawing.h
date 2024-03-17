@@ -13,6 +13,7 @@
 using namespace std;
 
 GLuint VBO, EBO, VAO;
+GLuint shaderProgram;
 
 
 vector<Point> temp_verts;
@@ -140,6 +141,13 @@ void DisplayEdges(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
         AddLineSegment(P, Q,color, vertices, indices,colors);
     }
 
+    glUseProgram(shaderProgram); // Use the shader program
+
+    // Set the color uniform in the shader
+    GLint colorLocation = glGetUniformLocation(shaderProgram, "c_pos");
+    glUniform3f(colorLocation, color.x, color.y, color.z);
+
+
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_COLOR_ARRAY);
 
@@ -218,6 +226,11 @@ void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     }
 
 
+    glUseProgram(shaderProgram); // Use the shader program
+
+    // Set the color uniform in the shader
+    GLint colorLocation = glGetUniformLocation(shaderProgram, "c_pos");
+    glUniform3f(colorLocation, color.x, color.y, color.z);
 
     glLineWidth(1); // Not work with filling, 1 for consistency
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -226,7 +239,8 @@ void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     glVertexPointer(3, GL_FLOAT, 0, vertices.data());
     glColorPointer(3, GL_FLOAT, 0, colors.data());
 
-    glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, indices.data());
+    glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, indices.data());
+
 
 
     glDisableClientState(GL_VERTEX_ARRAY);

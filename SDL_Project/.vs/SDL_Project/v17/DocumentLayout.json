@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "C:\\Capt\\CG2\\SDL_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_Drawing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\sphere_solid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\FrustumMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\SnubDodecMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\FrustumMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\SnubDodecMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_PROJECT\\AFFINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_PROJECT\\AFFINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\sphere_wireframe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\SnubDodecMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\sphere_wireframe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\sphere_solid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +58,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrustumMesh.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.h",
+              "RelativeDocumentMoniker": "SDL_Project\\FrustumMesh.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.h",
+              "RelativeToolTip": "SDL_Project\\FrustumMesh.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-16T13:57:39.647Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrustumMesh.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\FrustumMesh.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.cpp",
+              "RelativeToolTip": "SDL_Project\\FrustumMesh.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-16T14:11:47.446Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -46,7 +98,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "frustum_mesh.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\frustum_mesh.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp",
+              "RelativeToolTip": "SDL_Project\\frustum_mesh.cpp",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAACkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-17T07:14:50.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DT285_Drawing.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
+              "RelativeDocumentMoniker": "SDL_Project\\DT285_Drawing.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
+              "RelativeToolTip": "SDL_Project\\DT285_Drawing.h",
+              "ViewState": "AQIAADIAAAAAAAAAAAAwwNoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-02T06:41:25.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "vertex_shader.glsl",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl",
+              "RelativeDocumentMoniker": "SDL_Project\\vertex_shader.glsl",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl",
+              "RelativeToolTip": "SDL_Project\\vertex_shader.glsl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-17T07:47:10.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fragment_shader.glsl",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\fragment_shader.glsl",
+              "RelativeDocumentMoniker": "SDL_Project\\fragment_shader.glsl",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\fragment_shader.glsl",
+              "RelativeToolTip": "SDL_Project\\fragment_shader.glsl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-17T07:47:27.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SnubDodecMesh.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.cpp",
+              "RelativeToolTip": "SDL_Project\\SnubDodecMesh.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-16T14:12:10.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Affine.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
+              "RelativeDocumentMoniker": "SDL_Project\\Affine.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
+              "RelativeToolTip": "SDL_Project\\Affine.h",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwBgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-02T06:41:25.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h",
+              "RelativeDocumentMoniker": "SDL_Project\\Mesh.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h",
+              "RelativeToolTip": "SDL_Project\\Mesh.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-02T06:41:25.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "SnubDodecMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.h",
@@ -59,67 +202,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "sphere_wireframe.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_wireframe.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp",
               "RelativeToolTip": "SDL_Project\\sphere_wireframe.cpp",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAABRwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-02T07:33:25.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-02T07:33:25.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "sphere_solid.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_solid.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp",
               "RelativeToolTip": "SDL_Project\\sphere_solid.cpp",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAADgAAAAzAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAABRwDgAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-02T06:41:25.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DT285_Drawing.h",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
-              "RelativeDocumentMoniker": "SDL_Project\\DT285_Drawing.h",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
-              "RelativeToolTip": "SDL_Project\\DT285_Drawing.h",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAAAHAAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T06:41:25.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Affine.h",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
-              "RelativeDocumentMoniker": "SDL_Project\\Affine.h",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
-              "RelativeToolTip": "SDL_Project\\Affine.h",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAmwB8AAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T06:41:25.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Mesh.h",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h",
-              "RelativeDocumentMoniker": "SDL_Project\\Mesh.h",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h",
-              "RelativeToolTip": "SDL_Project\\Mesh.h",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAkwBcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T06:41:25.43Z"
+              "WhenOpened": "2024-03-02T06:41:25.255Z"
             }
           ]
         }

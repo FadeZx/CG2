@@ -133,7 +133,8 @@
     <ClCompile Include="Affine.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
-    <ClCompile Include="DT285_simple_cube.cpp" />
+    <ClCompile Include="FrustumMesh.cpp" />
+    <ClCompile Include="frustum_mesh.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,8 +142,13 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CubeMesh.h" />
     <ClInclude Include="DT285_Drawing.h" />
+    <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="SnubDodecMesh.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment_shader.glsl" />
+    <None Include="vertex_shader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

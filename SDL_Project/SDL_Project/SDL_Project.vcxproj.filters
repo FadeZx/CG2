@@ -27,7 +27,10 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DT285_simple_cube.cpp">
+    <ClCompile Include="FrustumMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frustum_mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,5 +53,12 @@
     <ClInclude Include="DT285_Drawing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FrustumMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex_shader.glsl" />
+    <None Include="fragment_shader.glsl" />
   </ItemGroup>
 </Project>
