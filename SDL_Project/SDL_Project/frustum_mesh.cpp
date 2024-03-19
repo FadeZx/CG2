@@ -49,36 +49,6 @@ void Init(void) {
     camera = Camera(O - 5 * ez, -ez, ey, 0.5f * PI, 1.5f, 1, 3);
     PersProj = PerspectiveProjection(3.0f);
 
-    // Load and compile shaders
-    std::string vertexShaderCode = loadShaderSourceFromFile("vertex_shader.glsl");
-    std::string fragmentShaderCode = loadShaderSourceFromFile("fragment_shader.glsl");
-
-    const char* vertexShaderSource = vertexShaderCode.c_str();
-    const char* fragmentShaderSource = fragmentShaderCode.c_str();
-
-    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShader);
-    // Check for shader compile errors...
-
-    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-    // Check for shader compile errors...
-
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-    // Check for linking errors...
-
-    glUseProgram(shaderProgram);
-
-    // Delete the shaders as they're linked into our program now and no longer necessary
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-
-    InitBuffer(); // Initialize buffer for mesh data
 }
 
 
