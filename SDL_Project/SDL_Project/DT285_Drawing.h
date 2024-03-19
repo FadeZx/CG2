@@ -13,6 +13,7 @@
 using namespace std;
 
 GLuint VBO, EBO, VAO;
+GLuint shaderProgram;
 
 
 vector<Point> temp_verts;
@@ -27,21 +28,25 @@ vector<float> colors;
 
 
 void InitBuffer() {
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // Assume some data upload happens here with glBufferData
-
     glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glGenBuffers(1, &EBO);
+
     glBindVertexArray(VAO);
 
-    // Position attribute
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    // Color attribute (adjust stride and offset as necessary)
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+    glBindVertexArray(0);
 }
+
+
 
 Matrix PerspectiveProjection(float dist)
 {
@@ -140,16 +145,19 @@ void DisplayEdges(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
         AddLineSegment(P, Q, color, vertices, indices, colors);
     }
 
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glEnableClientState(GL_COLOR_ARRAY);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
 
-    glVertexPointer(3, GL_FLOAT, 0, vertices.data());
-    glColorPointer(3, GL_FLOAT, 0, colors.data());
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 
-    glDrawElements(GL_LINES, indices.size(), GL_UNSIGNED_INT, indices.data());
+    glUseProgram(shaderProgram);
+    glUniform4f(glGetUniformLocation(shaderProgram, "c_pos"), color.x, color.y, color.z, 1.0f);
 
-    glDisableClientState(GL_VERTEX_ARRAY);
-    glDisableClientState(GL_COLOR_ARRAY);
+    glDrawElements(GL_LINES, indices.size(), GL_UNSIGNED_INT, 0);
+
+    glBindVertexArray(0);
 }
 
 float magnitude(const Vector& v) {
@@ -158,8 +166,7 @@ float magnitude(const Vector& v) {
 
 
 
-void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& color)
-{
+void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& baseColor) {
     vertices.clear();
     indices.clear();
     colors.clear();
@@ -167,16 +174,13 @@ void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
     transformed_verts.resize(m.VertexCount());
 
     Matrix obj2dev = Proj * A;
-    Vector lightDir(0, 0, 1); // Ensure this direction is correct for your scene
-    Point camPos(0, 0, 3); // Assuming the camera is looking towards the negative z-axis
+    Vector lightDir(0, 0, 1);
+    Point camPos(0, 0, 3);
 
-    // Transform all vertices for lighting calculations
     for (int i = 0; i < m.VertexCount(); ++i) {
         temp_verts[i] = A * m.GetVertex(i);
     }
 
-
-    // Prepare indices for edges
     for (int j = 0; j < m.FaceCount(); ++j) {
         Mesh::Face face = m.GetFace(j);
 
@@ -184,28 +188,21 @@ void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
         const Point& Q1 = temp_verts[face.index2];
         const Point& R1 = temp_verts[face.index3];
 
-        // Calculate face normal for backface culling
         Vector normal = cross(Q1 - P1, R1 - P1);
         normal.Normalize();
 
-        Vector viewVector = P1 - camPos; // Vector from camera position to a point on the face
-
+        Vector viewVector = P1 - camPos;
         viewVector.Normalize();
 
-
-        // Backface culling check
         if (dot(normal, viewVector) > 0) {
             continue;
         }
 
         lightDir.Normalize();
-        // Calculate the diffuse lighting component
         float dotProduct = dot(lightDir, normal);
-        float diffuse = dotProduct / abs(lightDir) * abs(normal);
+        float diffuse = max(dotProduct, 0.0f);
+        Vector finalColor = diffuse * baseColor;
 
-        Vector finalColor = diffuse * color;
-
-        // Transform the vertices for rendering
         Hcoords transformedP = Proj * temp_verts[face.index1];
         Hcoords transformedQ = Proj * temp_verts[face.index2];
         Hcoords transformedR = Proj * temp_verts[face.index3];
@@ -217,22 +214,25 @@ void DisplayFaces(Mesh& m, const Affine& A, const Matrix& Proj, const Vector& co
         FillFace(P, Q, R, finalColor, vertices, indices, colors);
     }
 
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
 
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 
-    glLineWidth(1); // Not work with filling, 1 for consistency
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glEnableClientState(GL_COLOR_ARRAY);
+    glUseProgram(shaderProgram);
+    GLint colorLocation = glGetUniformLocation(shaderProgram, "c_pos");
 
-    glVertexPointer(3, GL_FLOAT, 0, vertices.data());
-    glColorPointer(3, GL_FLOAT, 0, colors.data());
+    for (size_t i = 0; i < indices.size(); i += 3) {
+        Vector faceColor = Vector(colors[3 * indices[i]], colors[3 * indices[i] + 1], colors[3 * indices[i] + 2]);
+        glUniform4f(colorLocation, faceColor.x, faceColor.y, faceColor.z, 1.0f);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(i * sizeof(unsigned int)));
+    }
 
-    glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices.size()), GL_UNSIGNED_INT, indices.data());
-
-
-    glDisableClientState(GL_VERTEX_ARRAY);
-    glDisableClientState(GL_COLOR_ARRAY);
-
+    glBindVertexArray(0);
 }
+
 
 
 #endif

@@ -49,6 +49,34 @@ void Init(void) {
     camera = Camera(O - 5 * ez, -ez, ey, 0.5f * PI, 1.5f, 1, 3);
     PersProj = PerspectiveProjection(3.0f);
 
+    // Load and compile shaders
+    std::string vertexShaderCode = loadShaderSourceFromFile("vertex_shader.glsl");
+    std::string fragmentShaderCode = loadShaderSourceFromFile("fragment_shader.glsl");
+
+    const char* vertexShaderSource = vertexShaderCode.c_str();
+    const char* fragmentShaderSource = fragmentShaderCode.c_str();
+
+    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+    glCompileShader(vertexShader);
+
+    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+    glCompileShader(fragmentShader);
+
+    shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+
+    glUseProgram(shaderProgram);
+
+    // Delete the shaders as they're linked into our program now and no longer necessary
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+
+
+    InitBuffer();
 }
 
 
@@ -85,42 +113,42 @@ void key_pressed(SDL_Keycode keycode) {
         dist_increment = 0.1f,
         zoom_increment = 0.95f;
     switch (keycode) {
-        case '\x1b':
-            exit(0);
-            break;
-        case 'w':
-            camera.Pitch(angle_increment);
-            break;
-        case 'x':
-            camera.Pitch(-angle_increment);
-            break;
-        case 'a':
-            camera.Yaw(angle_increment);
-            break;
-        case 'd':
-            camera.Yaw(-angle_increment);
-            break;
-        case 's':
-            camera.Roll(angle_increment);
-            break;
-        case 'j':
-            camera.Roll(-angle_increment);
-            break;
-        case 'u':
-            camera.Forward(dist_increment);
-            break;
-        case 'm':
-            camera.Forward(-dist_increment);
-            break;
-        case '1':
-            camera.Zoom(zoom_increment);
-            break;
-        case '2':
-            camera.Zoom(1.0f / zoom_increment);
-            break;
-        case ' ':
-            draw_solid = !draw_solid;
-        }
+    case '\x1b':
+        exit(0);
+        break;
+    case 'w':
+        camera.Pitch(angle_increment);
+        break;
+    case 'x':
+        camera.Pitch(-angle_increment);
+        break;
+    case 'a':
+        camera.Yaw(angle_increment);
+        break;
+    case 'd':
+        camera.Yaw(-angle_increment);
+        break;
+    case 's':
+        camera.Roll(angle_increment);
+        break;
+    case 'j':
+        camera.Roll(-angle_increment);
+        break;
+    case 'u':
+        camera.Forward(dist_increment);
+        break;
+    case 'm':
+        camera.Forward(-dist_increment);
+        break;
+    case '1':
+        camera.Zoom(zoom_increment);
+        break;
+    case '2':
+        camera.Zoom(1.0f / zoom_increment);
+        break;
+    case ' ':
+        draw_solid = !draw_solid;
+    }
 }
 
 

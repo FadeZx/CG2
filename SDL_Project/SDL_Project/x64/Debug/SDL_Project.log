@@ -1,3 +1,3 @@
 ﻿  frustum_mesh.cpp
-C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Drawing.h(149,42): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Drawing.h(158,42): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
   SDL_Project.vcxproj -> C:\Capt\CG2\SDL_Project\x64\Debug\SDL_Project.exe
