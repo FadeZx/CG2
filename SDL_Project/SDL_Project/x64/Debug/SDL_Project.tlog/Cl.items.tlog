@@ -2,5 +2,6 @@ C:\Capt\CG2\SDL_Project\SDL_Project\Affine.cpp;C:\Capt\CG2\SDL_Project\SDL_Proje
 C:\Capt\CG2\SDL_Project\SDL_Project\Camera.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\Camera.obj
 C:\Capt\CG2\SDL_Project\SDL_Project\CubeMesh.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\CubeMesh.obj
 C:\Capt\CG2\SDL_Project\SDL_Project\FrustumMesh.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\FrustumMesh.obj
-C:\Capt\CG2\SDL_Project\SDL_Project\frustum_mesh.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\frustum_mesh.obj
+C:\Capt\CG2\SDL_Project\SDL_Project\Projection.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\Projection.obj
 C:\Capt\CG2\SDL_Project\SDL_Project\SnubDodecMesh.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\SnubDodecMesh.obj
+C:\Capt\CG2\SDL_Project\SDL_Project\TestProjection.cpp;C:\Capt\CG2\SDL_Project\SDL_Project\x64\Debug\TestProjection.obj

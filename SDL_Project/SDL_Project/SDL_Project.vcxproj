@@ -134,8 +134,9 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
-    <ClCompile Include="frustum_mesh.cpp" />
+    <ClCompile Include="Projection.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
+    <ClCompile Include="TestProjection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affine.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="DT285_Drawing.h" />
     <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Projection.h" />
     <ClInclude Include="SnubDodecMesh.h" />
   </ItemGroup>
   <ItemGroup>
