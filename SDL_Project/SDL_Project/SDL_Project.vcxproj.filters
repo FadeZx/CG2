@@ -18,9 +18,6 @@
     <ClCompile Include="Affine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SnubDodecMesh.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CubeMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -30,10 +27,13 @@
     <ClCompile Include="FrustumMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestProjection.cpp">
+    <ClCompile Include="Projection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Projection.cpp">
+    <ClCompile Include="projection_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SnubDodecMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,18 +53,19 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DT285_Drawing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FrustumMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Projection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DT285_DrawingCam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="vertex_shader.glsl" />
     <None Include="fragment_shader.glsl" />
+    <None Include="projection_test.exe" />
   </ItemGroup>
 </Project>

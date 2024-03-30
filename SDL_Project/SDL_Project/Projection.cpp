@@ -1,5 +1,6 @@
 #include "Projection.h"
 #include <iostream>
+
 Affine CameraToWorld(const Camera& cam) {
     return Affine(cam.Right(), cam.Up(), cam.Back(), cam.Eye());
 }

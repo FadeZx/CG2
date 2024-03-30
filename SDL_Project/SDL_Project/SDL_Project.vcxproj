@@ -134,15 +134,15 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
+    <ClCompile Include="projection_test.cpp" />
     <ClCompile Include="Projection.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
-    <ClCompile Include="TestProjection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affine.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CubeMesh.h" />
-    <ClInclude Include="DT285_Drawing.h" />
+    <ClInclude Include="DT285_DrawingCam.h" />
     <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Projection.h" />
@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="fragment_shader.glsl" />
+    <None Include="projection_test.exe" />
     <None Include="vertex_shader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
