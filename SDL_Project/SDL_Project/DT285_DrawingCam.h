@@ -177,9 +177,9 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
     temp_verts.resize(mesh.VertexCount());
     transformed_verts.resize(mesh.VertexCount());
 
-    Matrix obj2dev = projectionMatrix * viewMatrix * obj2world;
-    Vector lightDir(0, 0, 1);
-    Point camPos(0, 0, 3);
+    Matrix obj2dev = projectionMatrix *  obj2world;
+    Vector lightDir = -cam.Back();
+    Point camPos = cam.Eye();
 
     for (int i = 0; i < mesh.VertexCount(); ++i) {
         temp_verts[i] = obj2world * mesh.GetVertex(i);
@@ -207,9 +207,9 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
         float diffuse = max(dotProduct, 0.0f);
         Vector finalColor = diffuse * clr;
 
-        Hcoords transformedP = obj2dev * temp_verts[face.index1];
-        Hcoords transformedQ = obj2dev * temp_verts[face.index2];
-        Hcoords transformedR = obj2dev * temp_verts[face.index3];
+        Hcoords transformedP = obj2world * temp_verts[face.index1];
+        Hcoords transformedQ = obj2world * temp_verts[face.index2];
+        Hcoords transformedR = obj2world * temp_verts[face.index3];
 
         const Point& P = (1.0f / transformedP.w) * transformedP;
         const Point& Q = (1.0f / transformedQ.w) * transformedQ;
@@ -217,6 +217,24 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
         FillFace(P, Q, R, finalColor, vertices, indices, colors);
     }
+
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+
+    glUseProgram(shaderProgram);
+    GLint colorLocation = glGetUniformLocation(shaderProgram, "c_pos");
+
+    for (size_t i = 0; i < indices.size(); i += 3) {
+        Vector faceColor = Vector(colors[3 * indices[i]], colors[3 * indices[i] + 1], colors[3 * indices[i] + 2]);
+        glUniform4f(colorLocation, faceColor.x, faceColor.y, faceColor.z, 1.0f);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(i * sizeof(unsigned int)));
+    }
+
+    glBindVertexArray(0);
 }
 
 
