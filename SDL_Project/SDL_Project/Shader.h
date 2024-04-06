@@ -3,7 +3,7 @@
 #include <sstream>
 #include <stdexcept>
 #include <GL/glew.h>
-#include "DT285_Drawing.h"
+#include "DT285_DrawingCam.h"
 
 
 std::string loadShaderSourceFromFile(const std::string& filename) {
@@ -18,7 +18,7 @@ std::string loadShaderSourceFromFile(const std::string& filename) {
 }
 
 
-GLuint compileShader(const std::string& source, GLenum type) {
+void compileShader() {
     // Load and compile shaders
     std::string vertexShaderCode = loadShaderSourceFromFile("vertex_shader.glsl");
     std::string fragmentShaderCode = loadShaderSourceFromFile("fragment_shader.glsl");
@@ -44,4 +44,6 @@ GLuint compileShader(const std::string& source, GLenum type) {
     // Delete the shaders as they're linked into our program now and no longer necessary
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
+
+    InitBuffer();
 }

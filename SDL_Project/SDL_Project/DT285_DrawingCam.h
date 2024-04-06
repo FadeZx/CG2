@@ -168,8 +168,6 @@ void DisplayEdges(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
 void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const Vector& clr) {
 
-    Affine viewMatrix = WorldToCamera(cam);
-    Matrix projectionMatrix = CameraToNDC(cam);
 
     vertices.clear();
     indices.clear();
@@ -177,7 +175,7 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
     temp_verts.resize(mesh.VertexCount());
     transformed_verts.resize(mesh.VertexCount());
 
-    Matrix obj2dev = projectionMatrix *  obj2world;
+
     Vector lightDir = -cam.Back();
     Point camPos = cam.Eye();
 
@@ -207,9 +205,9 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
         float diffuse = max(dotProduct, 0.0f);
         Vector finalColor = diffuse * clr;
 
-        Hcoords transformedP = obj2world * temp_verts[face.index1];
-        Hcoords transformedQ = obj2world * temp_verts[face.index2];
-        Hcoords transformedR = obj2world * temp_verts[face.index3];
+        Hcoords transformedP = CameraToNDC(cam) * WorldToCamera(cam) * temp_verts[face.index1];
+        Hcoords transformedQ = CameraToNDC(cam) * WorldToCamera(cam) * temp_verts[face.index2];
+        Hcoords transformedR = CameraToNDC(cam) * WorldToCamera(cam) * temp_verts[face.index3];
 
         const Point& P = (1.0f / transformedP.w) * transformedP;
         const Point& Q = (1.0f / transformedQ.w) * transformedQ;

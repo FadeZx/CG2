@@ -30,10 +30,10 @@
     <ClCompile Include="Projection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="projection_test.cpp">
+    <ClCompile Include="SnubDodecMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SnubDodecMesh.cpp">
+    <ClCompile Include="proejection_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DT285_DrawingCam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

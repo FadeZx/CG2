@@ -134,7 +134,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
-    <ClCompile Include="projection_test.cpp" />
+    <ClCompile Include="proejection_test.cpp" />
     <ClCompile Include="Projection.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
   </ItemGroup>
@@ -146,6 +146,7 @@
     <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Projection.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="SnubDodecMesh.h" />
   </ItemGroup>
   <ItemGroup>
