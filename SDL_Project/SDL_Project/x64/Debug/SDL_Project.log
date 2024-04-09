@@ -1,7 +1,1 @@
-﻿  proejection_test.cpp
-E:\Project\CG2\SDL_Project\SDL_Project\DT285_DrawingCam.h(163,64): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\proejection_test.cpp(58,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\proejection_test.cpp(58,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\proejection_test.cpp(73,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-E:\Project\CG2\SDL_Project\SDL_Project\proejection_test.cpp(90,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  SDL_Project.vcxproj -> E:\Project\CG2\SDL_Project\x64\Debug\SDL_Project.exe
+﻿  SDL_Project.vcxproj -> C:\Capt\CG2\SDL_Project\x64\Debug\SDL_Project.exe
