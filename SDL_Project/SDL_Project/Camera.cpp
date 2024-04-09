@@ -23,9 +23,11 @@ Camera::Camera(const Point& E, const Vector& look, const Vector& up, float fov, 
     right = cross(up, back);
     right.Normalize();
     this->up = cross(back, right);
+    this->up.Normalize();
     distance = 1.0f / tan(fov / 2.0f);
-    width = 2.0f * distance * tan(fov/2);
+    width = 2.0f * distance * tan(fov / 2.0f);
     height = width / aspect;
+
 }
 
 

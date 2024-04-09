@@ -140,6 +140,9 @@ void DisplayEdges(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
     // Transform all vertices and prepare for drawing
     for (int i = 0; i < mesh.VertexCount(); ++i) {
         Hcoords v = obj2dev * mesh.GetVertex(i);
+        v.x /= v.w;
+        v.y /= v.w;
+        v.z /= v.w;
         temp_verts[i] = (1.0f / v.w) * v;
     }
 
@@ -147,7 +150,10 @@ void DisplayEdges(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
     for (int j = 0; j < mesh.EdgeCount(); j++) {
         const Point& P = temp_verts[mesh.GetEdge(j).index1],
             Q = temp_verts[mesh.GetEdge(j).index2];
-       AddLineSegment(P, Q, clr, vertices, indices, colors);
+
+        if (P.z < 0 && Q.z < 0) {
+            AddLineSegment(P, Q, clr, vertices, indices, colors);
+        }
     }
 
     glBindVertexArray(VAO);
@@ -185,6 +191,7 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
     for (int i = 0; i < mesh.VertexCount(); ++i) {
         temp_verts[i] = obj2world * mesh.GetVertex(i);
+
     }
 
     for (int j = 0; j < mesh.FaceCount(); ++j) {
@@ -214,7 +221,6 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
         Hcoords transformedR = obj2dev * R1;
 
 
-
         transformedP.x /= transformedP.w;
         transformedQ.x /= transformedQ.w;
         transformedR.x /= transformedR.w;
@@ -227,15 +233,13 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
         transformedQ.z /= transformedQ.w;
         transformedR.z /= transformedR.w;
 
-
-        
-
-
         const Point& P = (1.0f / transformedP.w) * transformedP;
         const Point& Q = (1.0f / transformedQ.w) * transformedQ;
         const Point& R = (1.0f / transformedR.w) * transformedR;
 
-        FillFace(P, Q, R, finalColor, vertices, indices, colors);
+        if (P.z < 0 || Q.z < 0 || R.z < 0) {
+            FillFace(P, Q, R, finalColor, vertices, indices, colors);
+        }
     }
 
     glBindVertexArray(VAO);
