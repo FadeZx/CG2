@@ -135,25 +135,39 @@ void DisplayEdges(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
     temp_verts.resize(mesh.VertexCount());
 
-    Matrix obj2dev = projectionMatrix * viewMatrix * obj2world;
+    Matrix obj2dev = projectionMatrix * viewMatrix;
 
-    // Transform all vertices and prepare for drawing
-    for (int i = 0; i < mesh.VertexCount(); ++i) {
-        Hcoords v = obj2dev * mesh.GetVertex(i);
-        v.x /= v.w;
-        v.y /= v.w;
-        v.z /= v.w;
-        temp_verts[i] = (1.0f / v.w) * v;
-    }
 
     // Prepare indices for edges
     for (int j = 0; j < mesh.EdgeCount(); j++) {
-        const Point& P = temp_verts[mesh.GetEdge(j).index1],
-            Q = temp_verts[mesh.GetEdge(j).index2];
 
-        if (P.z < 0 && Q.z < 0) {
-            AddLineSegment(P, Q, clr, vertices, indices, colors);
+        Mesh::Edge edge = mesh.GetEdge(j);
+
+        Hcoords P = obj2world * mesh.GetVertex(edge.index1);
+        Hcoords Q = obj2world * mesh.GetVertex(edge.index2);
+
+        Hcoords Pcam = WorldToCamera(cam) * P;
+        Hcoords Qcam = WorldToCamera(cam) * Q;
+
+        if (Pcam.z >= 0 || Qcam.z >= 0) {
+            continue; 
         }
+
+        P = obj2dev * P;
+        Q = obj2dev * Q;
+
+        P.x /= P.w;
+        P.y /= P.w;
+        P.z /= P.w;
+        P = (1.0f / P.w) * P;
+
+        Q.x /= Q.w;
+        Q.y /= Q.w;
+        Q.z /= Q.w;
+        Q = (1.0f / Q.w) * Q;
+
+        AddLineSegment(P, Q, clr, vertices, indices, colors);
+        
     }
 
     glBindVertexArray(VAO);
@@ -187,19 +201,28 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
     Matrix obj2dev = projectionMatrix * viewMatrix;
 
     Vector lightDir = cam.Back();
+    lightDir.Normalize();
     Point camPos = cam.Eye();
 
     for (int i = 0; i < mesh.VertexCount(); ++i) {
         temp_verts[i] = obj2world * mesh.GetVertex(i);
-
     }
 
     for (int j = 0; j < mesh.FaceCount(); ++j) {
+
         Mesh::Face face = mesh.GetFace(j);
 
-        const Point& P1 = temp_verts[face.index1];
-        const Point& Q1 = temp_verts[face.index2];
-        const Point& R1 = temp_verts[face.index3];
+        Point P1 = temp_verts[face.index1];
+        Point Q1 = temp_verts[face.index2];
+        Point R1 = temp_verts[face.index3];
+
+        Point P1cam = viewMatrix * P1;
+        Point Q1cam = viewMatrix * Q1;
+        Point R1cam = viewMatrix * R1;
+
+        if (P1cam.z >= 0 || Q1cam.z >= 0 || R1cam.z >= 0) {
+            continue;
+        }
 
         Vector normal = cross(Q1 - P1, R1 - P1);
         normal.Normalize();
@@ -211,10 +234,10 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
             continue;
         }
 
-        lightDir.Normalize();
         float dotProduct = dot(lightDir, normal);
         float diffuse = max(dotProduct, 0.0f);
         Vector finalColor = diffuse * clr;
+
 
         Hcoords transformedP = obj2dev * P1;
         Hcoords transformedQ = obj2dev * Q1;
@@ -237,9 +260,8 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
         const Point& Q = (1.0f / transformedQ.w) * transformedQ;
         const Point& R = (1.0f / transformedR.w) * transformedR;
 
-        if (P.z < 0 || Q.z < 0 || R.z < 0) {
-            FillFace(P, Q, R, finalColor, vertices, indices, colors);
-        }
+        FillFace(P, Q, R, finalColor, vertices, indices, colors);
+        
     }
 
     glBindVertexArray(VAO);

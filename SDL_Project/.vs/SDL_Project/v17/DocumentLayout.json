@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "C:\\Capt\\CG2\\SDL_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\projection_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\projection_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\proejection_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\proejection_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_DrawingCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_Drawing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Projection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Projection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\DT285_Drawing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\projection_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\projection_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -65,6 +61,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\sphere_solid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,45 +87,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Projection.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Projection.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\Projection.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Projection.cpp",
+              "RelativeToolTip": "SDL_Project\\Projection.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T09:28:39.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "DT285_DrawingCam.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_DrawingCam.h",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
               "RelativeToolTip": "SDL_Project\\DT285_DrawingCam.h",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAwwLsAAAAAAAAA",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAAAMkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-01T14:10:49.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Camera.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.h",
+              "RelativeDocumentMoniker": "SDL_Project\\Camera.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.h",
+              "RelativeToolTip": "SDL_Project\\Camera.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-01T14:18:13.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Camera.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\Camera.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp",
+              "RelativeToolTip": "SDL_Project\\Camera.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-01T14:18:05.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "projection_test.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\projection_test.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\projection_test.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\projection_test.cpp",
               "RelativeToolTip": "SDL_Project\\projection_test.cpp",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAAHIAAAAXAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAHoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-06T06:12:54.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "proejection_test.cpp",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\proejection_test.cpp",
-              "RelativeDocumentMoniker": "SDL_Project\\proejection_test.cpp",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\proejection_test.cpp",
-              "RelativeToolTip": "SDL_Project\\proejection_test.cpp",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAD8AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-06T06:12:27.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DT285_Drawing.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_Drawing.h",
@@ -138,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "frustum_mesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\frustum_mesh.cpp",
@@ -146,12 +172,11 @@
               "RelativeToolTip": "SDL_Project\\frustum_mesh.cpp",
               "ViewState": "AQIAACYAAAAAAAAAAAAAADkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-17T07:14:50.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T07:14:50.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Shader.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Shader.h",
               "RelativeDocumentMoniker": "SDL_Project\\Shader.h",
@@ -159,36 +184,11 @@
               "RelativeToolTip": "SDL_Project\\Shader.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-06T06:14:06.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Camera.h",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.h",
-              "RelativeDocumentMoniker": "SDL_Project\\Camera.h",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.h",
-              "RelativeToolTip": "SDL_Project\\Camera.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-01T14:18:13.167Z"
+              "WhenOpened": "2024-04-06T06:14:06.501Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Camera.cpp",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp",
-              "RelativeDocumentMoniker": "SDL_Project\\Camera.cpp",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp",
-              "RelativeToolTip": "SDL_Project\\Camera.cpp",
-              "ViewState": "AQIAACcAAAAAAAAAAAAuwE0AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-01T14:18:05.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "vertex_shader.glsl",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl",
               "RelativeDocumentMoniker": "SDL_Project\\vertex_shader.glsl",
@@ -200,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "fragment_shader.glsl",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\fragment_shader.glsl",
               "RelativeDocumentMoniker": "SDL_Project\\fragment_shader.glsl",
@@ -212,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "SnubDodecMesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.cpp",
@@ -224,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Affine.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
               "RelativeDocumentMoniker": "SDL_Project\\Affine.h",
@@ -236,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Mesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\Mesh.h",
@@ -248,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "SnubDodecMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.h",
@@ -260,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "sphere_wireframe.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_wireframe.cpp",
@@ -272,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "sphere_solid.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_solid.cpp",
