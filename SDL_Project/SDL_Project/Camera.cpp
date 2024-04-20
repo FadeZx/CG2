@@ -15,20 +15,26 @@ Camera::Camera(void)
 }
 
 Camera::Camera(const Point& E, const Vector& look, const Vector& up, float fov, float aspect, float near, float far)
-    : eye(E),
-    near(near),
-    far(far) {
-    back = -look;
-    back.Normalize();
-    right = cross(up, back);
-    right.Normalize();
-    this->up = cross(back, right);
-    this->up.Normalize();
-    distance = 1.0f / tan(fov / 2.0f);
-    width = 2.0f * distance * tan(fov / 2.0f);
+    : eye(E)
+    , distance(near), near(near), far(far)
+{
+    Vector w = -look;
+    w.Normalize();
+
+    Vector u = cross(up, w);
+    w.Normalize();
+    Vector v = cross(w, u);
+    right = u;
+
+    this->up = v;
+    back = w;
+
+    width = 2 * distance * std::tan(fov / 2.0f);
     height = width / aspect;
 
 }
+
+
 
 
 Point Camera::Eye(void) const {

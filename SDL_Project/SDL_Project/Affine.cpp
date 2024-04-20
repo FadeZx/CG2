@@ -134,17 +134,29 @@ Affine Scale(float rx, float ry, float rz) {
 
 }
 
-Affine Inverse(const Affine& A) {
-    Matrix inverseMatrix;
-    inverseMatrix[0] = Hcoords(A[0][0], A[1][0], A[2][0], 0.0f);
-    inverseMatrix[1] = Hcoords(A[0][1], A[1][1], A[2][1], 0.0f);
-    inverseMatrix[2] = Hcoords(A[0][2], A[1][2], A[2][2], 0.0f);
-    inverseMatrix[3] = Hcoords(0.0f, 0.0f, 0.0f, 1.0f);
+Affine Inverse(const Affine& A)
+{
+    float det = A[0][0] * A[1][1] * A[2][2]
+        + A[0][1] * A[1][2] * A[2][0]
+        + A[0][2] * A[1][0] * A[2][1]
+        - A[2][0] * A[1][1] * A[0][2]
+        - A[2][1] * A[1][2] * A[0][0]
+        - A[2][2] * A[1][0] * A[0][1];
 
-    Point translation = Point(A[0][3], A[1][3], A[2][3]);
-    translation = -translation;
-    translation = A * translation;
-    inverseMatrix[3] = Hcoords(translation.x, translation.y, translation.z, 1.0f);
+    Affine inverseTran{ {1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-A[0][3], -A[1][3], -A[2][3]} };
 
-    return Affine(inverseMatrix);
+    Affine adj{
+        (1 / det) * Vector {
+ A[1][1] * A[2][2] - A[2][1] * A[1][2],    -(A[1][0] * A[2][2] - A[2][0] * A[1][2]),   A[1][0] * A[2][1] - A[2][0] * A[1][1]
+},
+(1 / det) * Vector {
+-(A[0][1] * A[2][2] - A[2][1] * A[0][2]), A[0][0] * A[2][2] - A[2][0] * A[0][2],      -(A[0][0] * A[2][1] - A[2][0] * A[0][1])
+},
+(1 / det) * Vector {
+A[0][1] * A[1][2] - A[1][1] * A[0][2],    -(A[0][0] * A[1][2] - A[1][0] * A[0][2]),   A[0][0] * A[1][1] - A[1][0] * A[0][1]
+},
+{}
+    };
+
+    return adj * inverseTran;
 }
