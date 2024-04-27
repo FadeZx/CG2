@@ -136,6 +136,7 @@ void DisplayEdges(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
     for (int i = 0; i < mesh.EdgeCount(); ++i) {
         Mesh::Edge edge = mesh.GetEdge(i);
+
         Hcoords p1 = modelMatrix * mesh.GetVertex(edge.index1);
         Hcoords p2 = modelMatrix * mesh.GetVertex(edge.index2);
 
@@ -192,6 +193,11 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
         Vector normal = cross(Q - P, R - P);
         normal.Normalize();
+        float normLength = std::sqrt(normal.x * normal.x + normal.y * normal.y + normal.z * normal.z);
+
+        if (normLength == 0) {
+            cout << "Degenerate triangle found at face " << i << endl;
+        }
 
         if (dot(normal, Eye - P) <= 0)
             continue;

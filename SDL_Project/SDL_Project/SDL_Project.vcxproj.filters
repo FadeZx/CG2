@@ -42,7 +42,7 @@
     <ClCompile Include="DT285_Project1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CowMesh.cpp">
+    <ClCompile Include="ObjFileReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -81,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CowMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjFileReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

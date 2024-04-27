@@ -132,11 +132,11 @@
   <ItemGroup>
     <ClCompile Include="Affine.cpp" />
     <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="CowMesh.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
     <ClCompile Include="DT285_Project1.cpp" />
     <ClCompile Include="FillTriangle.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
+    <ClCompile Include="ObjFileReader.cpp" />
     <ClCompile Include="Projection.cpp" />
     <ClCompile Include="RasterUtilities.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
@@ -149,6 +149,7 @@
     <ClInclude Include="DT285_DrawingCam.h" />
     <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="ObjFileReader.h" />
     <ClInclude Include="Projection.h" />
     <ClInclude Include="Raster.h" />
     <ClInclude Include="RasterUtilities.h" />

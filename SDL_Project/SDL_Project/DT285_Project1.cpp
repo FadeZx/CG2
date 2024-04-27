@@ -57,12 +57,13 @@ std::string loadShaderSourceFromFile(const std::string& filename) {
 }
 
 void Init(void) {
+
     time_last = float(SDL_GetTicks() / 1000.0f);
     float aspect = float(width) / float(height);
     cam1 = Camera(O + ez, -ez, ey, 0.5f * PI, aspect, 0.01f, 1);
     cam2_0 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 1);
     cam2 = cam2_0;
-    cow = new CowMesh("../Obj/cow.obj");
+    cow = new CowMesh("../Obj/Statue.obj");
     float cow_scale = max(cow->Dimensions().x,
         max(cow->Dimensions().y, cow->Dimensions().z));
     cow2world = Trans(cow_center - O)
@@ -108,6 +109,7 @@ void Init(void) {
 
 
 void Draw(void) {
+
     // compute the time elapsed since the last call to 'Draw' (in seconds)
     double t = float(SDL_GetTicks() / 1000.0f);
     double dt = t - time_last;
