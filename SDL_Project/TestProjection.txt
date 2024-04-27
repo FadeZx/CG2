@@ -1,9 +1,68 @@
-1   1   2   1
-1   1   0   1
-1.83049   2.92878   -1.0404   -1
------------------------------------
-1   0   0   0
-0   1   0   0
-0   0   1   0
-0   0   0   1
------------------------------------
+#include <iostream>
+using namespace std;
+
+
+bool isLeapYear(int year);
+void f1();
+void f2(int a);
+int f3();
+int f4(int c);
+
+
+void f1() {
+    cout << "This program calculates leap years within a given range." << endl;
+}
+
+
+void f2(int a) {
+    cout << a << endl;
+}
+
+int f3() {
+    int start_year;
+    cout << "Enter the start year: ";
+    cin >> start_year;
+    return start_year;
+}
+
+
+int f4(int c) {
+    int end_year;
+    cout << "Enter the end year: ";
+    cin >> end_year;
+    return end_year;
+}
+
+int main() {
+    int start_year, end_year, leap_year_count = 0;
+    f1(); 
+
+    start_year = f3(); 
+    end_year = f4(start_year); 
+
+    cout << "Leap years from " << start_year << " to " << end_year << " are:" << endl;
+    for (int year = start_year; year <= end_year; year++) {
+        if (isLeapYear(year)) {
+            f2(year); 
+            leap_year_count++;
+        }
+    }
+
+
+    cout << "The total number of leap years between " << start_year << " and " << end_year << " is: " << leap_year_count << endl;
+
+    return 0;
+}
+
+
+bool isLeapYear(int year) {
+    if (year % 4 != 0) {
+        return false;
+    } else if (year % 100 != 0) {
+        return true; 
+    } else if (year % 400 == 0) {
+        return true; 
+    } else {
+        return false; 
+    }
+}

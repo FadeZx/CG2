@@ -133,10 +133,12 @@
     <ClCompile Include="Affine.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
+    <ClCompile Include="FillTriangle.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
-    <ClCompile Include="proejection_test.cpp" />
     <ClCompile Include="Projection.cpp" />
+    <ClCompile Include="RasterUtilities.cpp" />
     <ClCompile Include="SnubDodecMesh.cpp" />
+    <ClCompile Include="ZTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affine.h" />
@@ -146,6 +148,8 @@
     <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Projection.h" />
+    <ClInclude Include="Raster.h" />
+    <ClInclude Include="RasterUtilities.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SnubDodecMesh.h" />
   </ItemGroup>
