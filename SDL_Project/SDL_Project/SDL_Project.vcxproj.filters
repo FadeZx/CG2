@@ -36,10 +36,13 @@
     <ClCompile Include="RasterUtilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ZTriangle.cpp">
+    <ClCompile Include="FillTriangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FillTriangle.cpp">
+    <ClCompile Include="DT285_Project1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CowMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RasterUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CowMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

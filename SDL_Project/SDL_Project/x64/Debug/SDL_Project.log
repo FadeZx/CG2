@@ -1,7 +1,9 @@
-﻿  FillTriangle.cpp
-  RasterUtilities.cpp
-C:\Capt\CG2\SDL_Project\SDL_Project\RasterUtilities.cpp(44,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Capt\CG2\SDL_Project\SDL_Project\RasterUtilities.cpp(54,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Capt\CG2\SDL_Project\SDL_Project\RasterUtilities.cpp(55,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  SDL_Project.vcxproj -> C:\Capt\CG2\SDL_Project\x64\Debug\SDL_Project.exe
+﻿  DT285_Project1.cpp
+C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\SDL_Project\DT285_DrawingCam.h(160,42): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  (compiling source file 'DT285_Project1.cpp')
+  
+C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(72,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(72,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(114,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(131,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  SDL_Project.vcxproj -> C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\x64\Debug\SDL_Project.exe
