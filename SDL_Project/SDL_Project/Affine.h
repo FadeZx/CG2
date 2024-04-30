@@ -61,6 +61,7 @@ float dot(const Vector& u, const Vector& v);
 float abs(const Vector& v);
 Vector cross(const Vector& u, const Vector& v);
 Affine Rot(float t, const Vector& v);
+Affine RotY(float t);
 Affine Trans(const Vector& v);
 Affine Scale(float r);
 Affine Scale(float rx, float ry, float rz);

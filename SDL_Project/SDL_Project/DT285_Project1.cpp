@@ -10,6 +10,7 @@
 #include "FrustumMesh.h"
 #include "CubeMesh.h"
 #include "CowMesh.h"
+#include "GrassMesh.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -34,12 +35,19 @@ const float PI = 4.0f * atan(1.0f);
 Camera cam1, cam2,
 cam2_0;
 CowMesh* cow;
+CowMesh* cow2;
+vector<GrassMesh*> grassMeshes;
 CubeMesh cube;
-Affine cube2world[9],
-cow2world;
+Affine cube2world[],
+cow2world,cow22world;
+Point cube_center(0, -1, -2);
+vector<Affine> grass2world;
 float cow_rot_rate = 2 * PI / 10.0f;
 Vector cow_rot_axis(0, 1, 0);
 Point cow_center(0, 0, -2);
+
+float cow2_orbit_radius = 2.0f; 
+float orbit_speed = PI / 5.0f;
 bool use_cam1 = true,
 draw_solid = false;
 bool should_close = false;
@@ -63,18 +71,50 @@ void Init(void) {
     cam1 = Camera(O + ez, -ez, ey, 0.5f * PI, aspect, 0.01f, 1);
     cam2_0 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 1);
     cam2 = cam2_0;
-    cow = new CowMesh("../Obj/Statue.obj");
+
+
+    cow = new CowMesh("../Obj/cow.obj");
     float cow_scale = max(cow->Dimensions().x,
         max(cow->Dimensions().y, cow->Dimensions().z));
     cow2world = Trans(cow_center - O)
         * Scale(2.0f / cow_scale)
         * Trans(O - cow->Center());
+
+    cow2 = new CowMesh("../Obj/cow.obj");
+    float cow2_scale = cow_scale / 2.0f;
+
+    Vector orbit_displacement(cow2_orbit_radius, 0, 0);  // Correctly creating a vector
+    Point cow2_center = cow_center + orbit_displacement;  // Correct addition of point and vector
+
+
+
+    cow22world = Trans(cow_center - O)
+        * Scale(2.0f / cow2_scale)
+        * Trans(O - cow->Center());
+
+    for (int i = 0; i < 9; ++i) {
+        GrassMesh* grass = new GrassMesh("../Obj/grass.obj");
+        grassMeshes.push_back(grass);
+        float grass_scale = max(grass->Dimensions().x,
+            max(grass->Dimensions().y, grass->Dimensions().z));
+        grass2world.push_back(
+            Trans(Point((i % 3) - 1, -0.9f, -(i / 3) - 1) - O)
+            * Scale(0.75f / grass_scale)
+            * Trans(O - grass->Center())
+        );
+    }
+
+
     for (int i = 0; i < 9; ++i)
         cube2world[i] = Trans(Point((i % 3) - 1, -1.1f, -(i / 3) - 1) - O)
         * Scale(0.75f / cube.Dimensions().x,
             0.1f / cube.Dimensions().y,
             0.75f / cube.Dimensions().z)
         * Trans(O - cube.Center());
+   
+       
+
+
 
 
     // Load and compile shaders
@@ -109,58 +149,98 @@ void Init(void) {
 
 
 void Draw(void) {
-
-    // compute the time elapsed since the last call to 'Draw' (in seconds)
     double t = float(SDL_GetTicks() / 1000.0f);
     double dt = t - time_last;
     time_last = t;
 
-    // clear the screen
-    glClearColor(1, 1, 1, 0);
-    glClear(GL_COLOR_BUFFER_BIT);
+    // Clear the screen
+    glClearColor(0.8, 1, 1, 0); // Soft cyan background
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear color and depth buffers
 
     Camera& cam = use_cam1 ? cam1 : cam2;
 
-    // Draw cubes
-    for (int i = 0; i < 9; ++i)
-        if (draw_solid)
-            DisplayFaces(cube, cube2world[i], cam, Vector(1, 0, 1));
-        else
-            DisplayEdges(cube, cube2world[i], cam, Vector(1, 0, 1));
 
-    // Draw cow dodecahedron
+    for (int i = 0; i < 9; ++i) {
+        // Draw the grass mesh on top of the cube
+        if (draw_solid)
+        {
+            DisplayFaces(cube, cube2world[i], cam, Vector(0.02, 0.42, 0.082)); // Green color
+            
+           
+        }
+        else
+        {
+          DisplayEdges(cube, cube2world[i], cam, Vector(0.02, 0.42, 0.082)); // Green color edges
+          
+        
+        }
+    }
+
+    for (int i = 0; i < 9; i++)
+    {
+        if (draw_solid)
+        {
+            DisplayFaces(*grassMeshes[i], grass2world[i], cam, Vector(0.129, 0.612, 0.165)); // Lighter green for grass
+        }
+        else
+        {
+            DisplayEdges(*grassMeshes[i], grass2world[i], cam, Vector(0.129, 0.612, 0.165)); // Lighter green edges for grass
+        }
+    }
+
+    // Draw the cow dodecahedron
     cow2world = Trans(cow_center - O)
         * Rot(cow_rot_rate * dt, cow_rot_axis)
         * Trans(O - cow_center)
         * cow2world;
-    if (draw_solid)
-        DisplayFaces(*cow, cow2world, cam, Vector(0, 1, 0));
-    else
-        DisplayEdges(*cow, cow2world, cam, Vector(0, 1, 0));
 
-    // Draw (other) camera mesh
+
+
+    if (draw_solid)
+        DisplayFaces(*cow, cow2world, cam, Vector(0.922, 0.035, 0.035)); // Use a different color for cow
+    else
+        DisplayEdges(*cow, cow2world, cam, Vector(0.922, 0.035, 0.035)); // Different color edges for cow
+
+    float angle = orbit_speed * t;
+    Vector orbit_vector(cos(angle) * cow2_orbit_radius, 0, sin(angle) * cow2_orbit_radius);
+    Point cow2_new_position = cow_center + orbit_vector;
+
+    // Update cow2 transformation matrix
+    cow22world = Trans(cow2_new_position - O) * Scale(2.0f / cow2->Dimensions().x) * Trans(O - cow2->Center());
+
+    // Set cow2 to face towards the center cow (optional, remove if not needed)
+    float facing_angle = angle + PI; // To face the opposite direction
+    cow22world = cow22world * RotY(facing_angle);
+
+    if(draw_solid)
+		DisplayFaces(*cow2, cow22world, cam, Vector(0.922, 0.035, 0.035)); // Use a different color for cow
+	else
+		DisplayEdges(*cow2, cow22world, cam, Vector(0.922, 0.035, 0.035)); // Different color edges for cow
+
+    // Draw the frustum of the other camera
     float aspect = float(width) / float(height);
     if (use_cam1) {
-        const float& D = cam2.ViewportGeometry().z,
-            W = cam2.ViewportGeometry().x,
-            H = cam2.ViewportGeometry().y,
-            n = cam2.NearDistance(),
-            f = cam2.FarDistance();
+        const auto& D = cam2.ViewportGeometry().z;
+        const auto& W = cam2.ViewportGeometry().x;
+        const auto& H = cam2.ViewportGeometry().y;
+        const auto& n = cam2.NearDistance();
+        const auto& f = cam2.FarDistance();
         float fov = 2 * atan(0.5f * W / D);
         FrustumMesh frustum(fov, aspect, n, f);
         DisplayEdges(frustum, CameraToWorld(cam2), cam, Vector(0, 0, 0));
     }
     else {
-        const float& D = cam1.ViewportGeometry().z,
-            W = cam1.ViewportGeometry().x,
-            H = cam1.ViewportGeometry().y,
-            n = cam1.NearDistance(),
-            f = cam1.FarDistance();
+        const auto& D = cam1.ViewportGeometry().z;
+        const auto& W = cam1.ViewportGeometry().x;
+        const auto& H = cam1.ViewportGeometry().y;
+        const auto& n = cam1.NearDistance();
+        const auto& f = cam1.FarDistance();
         float fov = 2 * atan(0.5f * W / D);
         FrustumMesh frustum(fov, aspect, n, f);
         DisplayEdges(frustum, CameraToWorld(cam1), cam, Vector(1, 0, 0));
     }
 }
+
 
 
 void key_pressed(SDL_Keycode keycode) {

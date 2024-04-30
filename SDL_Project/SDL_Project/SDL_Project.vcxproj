@@ -148,6 +148,7 @@
     <ClInclude Include="CubeMesh.h" />
     <ClInclude Include="DT285_DrawingCam.h" />
     <ClInclude Include="FrustumMesh.h" />
+    <ClInclude Include="GrassMesh.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="ObjFileReader.h" />
     <ClInclude Include="Projection.h" />

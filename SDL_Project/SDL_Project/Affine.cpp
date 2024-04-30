@@ -44,8 +44,10 @@ Affine::Affine(const Vector& Lx, const Vector& Ly, const Vector& Lz, const Point
 
 
 Hcoords operator+(const Hcoords& u, const Hcoords& v) {
+    assert((u.w == 1.0f && v.w == 0.0f) || (u.w == 0.0f && v.w == 1.0f) || (u.w == 0.0f && v.w == 0.0f));
     return Hcoords(u.x + v.x, u.y + v.y, u.z + v.z, u.w + v.w);
 }
+
 
 Hcoords operator-(const Hcoords& u, const Hcoords& v) {
     return Hcoords(u.x - v.x, u.y - v.y, u.z - v.z, u.w - v.w);
@@ -104,6 +106,20 @@ Affine Rot(float t, const Vector& v) {
 
     return Affine(rotationMatrix);
 }
+
+Affine RotY(float t) {
+    float cosT = std::cos(t);
+    float sinT = std::sin(t);
+
+    Matrix rotationMatrix;
+    rotationMatrix[0] = Hcoords(cosT, 0.0f, sinT, 0.0f);
+    rotationMatrix[1] = Hcoords(0.0f, 1.0f, 0.0f, 0.0f);
+    rotationMatrix[2] = Hcoords(-sinT, 0.0f, cosT, 0.0f);
+    rotationMatrix[3] = Hcoords(0.0f, 0.0f, 0.0f, 1.0f);
+
+    return Affine(rotationMatrix);
+}
+
 
 Affine Trans(const Vector& v) {
     Affine result;
