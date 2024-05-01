@@ -97,3 +97,39 @@ Camera& Camera::Roll(float angle) {
     return *this;
 }
 
+void Camera::LookAt(Point target)
+{
+    Vector look = target - eye;
+    look.Normalize();
+
+    back = -look;
+    right = cross(up, back);
+    right.Normalize();
+    up = cross(back, right);
+}
+
+void Camera::LookAt(const Affine& target) {
+    Point position(target[0].w, target[1].w, target[2].w);
+    LookAt(position);
+}
+
+void Camera::EyeMoveTo(Point X) {
+    eye = X;
+}
+
+void Camera::EyeMoveTo(Affine& target) {
+    Point position(target[0].w, target[1].w, target[2].w);
+    eye = position;
+}
+
+void Camera::LookInDirection(Vector direction)
+{
+    direction.w = 0;
+    direction.Normalize();
+
+    back = -direction;
+    right = cross(up, back);
+    right.Normalize();
+    //up = cross(back, right);
+}
+

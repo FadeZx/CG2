@@ -89,6 +89,9 @@
     <ClInclude Include="GrassMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CloudMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="vertex_shader.glsl" />

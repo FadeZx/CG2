@@ -25,11 +25,15 @@ class Camera {
     Camera& Yaw(float angle);
     Camera& Pitch(float angle);
     Camera& Roll(float angle);
+    void LookAt(Point target);
+    void LookAt(const Affine& target);
+    void EyeMoveTo(Point X);
+    void EyeMoveTo(Affine& target);
+    void LookInDirection(Vector direction);
   private:
     Point eye;
     Vector right, up, back;
-    float width, height, distance,
-          near, far;
+    float width, height, distance,near, far;
 };
 
 

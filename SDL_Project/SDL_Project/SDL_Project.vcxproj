@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Affine.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="CloudMesh.h" />
     <ClInclude Include="CowMesh.h" />
     <ClInclude Include="CubeMesh.h" />
     <ClInclude Include="DT285_DrawingCam.h" />

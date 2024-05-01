@@ -12,7 +12,15 @@ void ObjFileReader::loadFromObj(const std::string& filename) {
     }
     std::string line;
     std::set<std::pair<int, int>> edgeSet; // To store unique edges
-    while (getline(file, line)) {
+
+    while (std::getline(file, line)) {
+        // Handle comments
+        size_t commentPos = line.find('#');
+        if (commentPos != std::string::npos)
+            line = line.substr(0, commentPos);
+
+        if (line.empty()) continue;
+
         std::stringstream ss(line);
         std::string type;
         ss >> type;
@@ -20,21 +28,27 @@ void ObjFileReader::loadFromObj(const std::string& filename) {
             float x, y, z;
             ss >> x >> y >> z;
             vertices.emplace_back(x, y, z);
-        } else if (type == "f") {
-            std::string vertex1, vertex2, vertex3;
-            int idx1, idx2, idx3;
-            char ignore; 
-            if (ss >> vertex1 >> vertex2 >> vertex3) {
-                std::stringstream(vertex1) >> idx1 >> ignore >> ignore >> ignore;
-                std::stringstream(vertex2) >> idx2 >> ignore >> ignore >> ignore;
-                std::stringstream(vertex3) >> idx3 >> ignore >> ignore >> ignore;
+        }
+        else if (type == "f") {
+            std::vector<int> indices;
+            std::string vertexData;
+            while (ss >> vertexData) {
+                std::replace(vertexData.begin(), vertexData.end(), '/', ' ');
+                std::stringstream vertexStream(vertexData);
+                int vertexIndex, textureIndex, normalIndex;
+                vertexStream >> vertexIndex; // Parse vertex index
 
-                faces.emplace_back(idx1 - 1, idx2 - 1, idx3 - 1);
-
-                std::pair<int, int> edges[3] = {
-                    {std::min(idx1, idx2) - 1, std::max(idx1, idx2) - 1},
-                    {std::min(idx2, idx3) - 1, std::max(idx2, idx3) - 1},
-                    {std::min(idx3, idx1) - 1, std::max(idx3, idx1) - 1}
+                // Handle relative indices
+                if (vertexIndex < 0) vertexIndex = vertices.size() + vertexIndex + 1;
+                if (vertexIndex > 0) indices.push_back(vertexIndex - 1); // Convert to 0-based index
+            }
+            // Add faces and edges
+            for (size_t i = 2; i < indices.size(); ++i) {
+                faces.emplace_back(indices[0], indices[i - 1], indices[i]);
+                std::pair<int, int> edges[] = {
+                    {std::min(indices[0], indices[i - 1]), std::max(indices[0], indices[i - 1])},
+                    {std::min(indices[i - 1], indices[i]), std::max(indices[i - 1], indices[i])},
+                    {std::min(indices[i], indices[0]), std::max(indices[i], indices[0])}
                 };
                 for (auto& edge : edges) {
                     edgeSet.insert(edge);
@@ -42,10 +56,12 @@ void ObjFileReader::loadFromObj(const std::string& filename) {
             }
         }
     }
+
     for (auto& edge : edgeSet) {
-        edges.emplace_back(edge.first, edge.second);
+       edges.emplace_back(edge.first, edge.second);
     }
 }
+
 
 const std::vector<Point>& ObjFileReader::getVertices() const {
     return vertices;
