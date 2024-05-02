@@ -74,12 +74,15 @@ std::string loadShaderSourceFromFile(const std::string& filename) {
 
 void Init(void) {
 
+    glEnable(GL_DEPTH_TEST);             
+    glDepthFunc(GL_LESS);                
+
     time_last = float(SDL_GetTicks() / 1000.0f);
     float aspect = float(width) / float(height);
-    cam1 = Camera(O + ez, -ez, ey, 0.5f * PI, aspect, 0.01f, 1);
-    cam2_0 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 1);
+    cam1 = Camera(O + ez, -ez, ey, 0.5f * PI, aspect, 0.01f, 10);
+    cam2_0 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 10);
     cam2 = cam2_0;
-    cam3 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 1);
+    cam3 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 10);
 
 
     cow = new CowMesh("../Obj/cow.obj");

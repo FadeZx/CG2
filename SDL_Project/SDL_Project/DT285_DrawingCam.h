@@ -142,8 +142,8 @@ void DisplayEdges(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
 
         if (p1.z < 0 || p2.z < 0) continue; 
 
-        Point start(p1.x / p1.w, p1.y / p1.w, 0);
-        Point end(p2.x / p2.w, p2.y / p2.w, 0);
+        Point start(p1.x / p1.w, p1.y / p1.w, p1.z / p1.w);
+        Point end(p2.x / p2.w, p2.y / p2.w, p2.z / p2.w);
 
         AddLineSegment(start, end, clr, vertices, indices, colors);
     }
@@ -205,9 +205,9 @@ void DisplayFaces(Mesh& mesh, const Affine& obj2world, const Camera& cam, const 
         float diffuse = dot(LightDir, normal) / (Lmag * nMag);
         Vector diffusedColor = diffuse * clr;
 
-        Point v1(projV1.x / projV1.w, projV1.y / projV1.w, 0);
-        Point v2(projV2.x / projV2.w, projV2.y / projV2.w, 0);
-        Point v3(projV3.x / projV3.w, projV3.y / projV3.w, 0);
+        Point v1(projV1.x / projV1.w, projV1.y / projV1.w, projV1.z / projV1.w);
+        Point v2(projV2.x / projV2.w, projV2.y / projV2.w, projV2.z / projV2.w);
+        Point v3(projV3.x / projV3.w, projV3.y / projV3.w, projV3.z / projV3.w);
 
         FillFace(v1, v2, v3, diffusedColor, vertices, indices, colors);
     }

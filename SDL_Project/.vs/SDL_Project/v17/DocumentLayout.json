@@ -35,9 +35,6 @@
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\RANDOM||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Projection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\Projection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -51,9 +48,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_PROJECT\\AFFINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_PROJECT\\AFFINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\CloudMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -94,6 +88,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SDL_Project\\frustum_mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\random||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -103,7 +103,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -113,9 +113,23 @@
               "RelativeDocumentMoniker": "SDL_Project\\DT285_Project1.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp",
               "RelativeToolTip": "SDL_Project\\DT285_Project1.cpp",
-              "ViewState": "AQIAAPkAAAAAAAAAAAAAAAwBAAAEAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAAEwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-27T13:29:28.561Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DT285_DrawingCam.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
+              "RelativeDocumentMoniker": "SDL_Project\\DT285_DrawingCam.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
+              "RelativeToolTip": "SDL_Project\\DT285_DrawingCam.h",
+              "ViewState": "AQIAALMAAAAAAAAAAAAAALYAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-01T14:10:49.82Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -130,12 +144,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-27T13:29:20.393Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ObjFileReader.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ObjFileReader.h",
               "RelativeDocumentMoniker": "SDL_Project\\ObjFileReader.h",
@@ -144,8 +157,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-27T15:14:46.117Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -158,22 +170,7 @@
               "ViewState": "AQIAAD4AAAAAAAAAAAAqwFAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-27T15:15:07.534Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DT285_DrawingCam.h",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
-              "RelativeDocumentMoniker": "SDL_Project\\DT285_DrawingCam.h",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
-              "RelativeToolTip": "SDL_Project\\DT285_DrawingCam.h",
-              "ViewState": "AQIAAK8AAAAAAAAAAAAAAMEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-01T14:10:49.82Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -193,8 +190,7 @@
               "RelativeToolTip": "SDL_Project\\fragment_shader.glsl",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-17T07:47:27.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T07:47:27.088Z"
             },
             {
               "$type": "Document",
@@ -206,8 +202,7 @@
               "RelativeToolTip": "SDL_Project\\Mesh.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T06:41:25.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-02T06:41:25.43Z"
             },
             {
               "$type": "Document",
@@ -219,8 +214,7 @@
               "RelativeToolTip": "SDL_Project\\Camera.cpp",
               "ViewState": "AQIAAGEAAAAAAAAAAAAawHwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-01T14:18:05.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T14:18:05.622Z"
             },
             {
               "$type": "Document",
@@ -232,12 +226,11 @@
               "RelativeToolTip": "SDL_Project\\Camera.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-01T14:18:13.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T14:18:13.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Projection.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Projection.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\Projection.cpp",
@@ -245,12 +238,11 @@
               "RelativeToolTip": "SDL_Project\\Projection.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-11T09:28:39.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T09:28:39.4Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Camera.h",
               "DocumentMoniker": "C:\\Users\\filmm\\Downloads\\Camera.h",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\filmm\\Downloads\\Camera.h",
@@ -258,12 +250,11 @@
               "RelativeToolTip": "..\\..\\..\\Users\\filmm\\Downloads\\Camera.h",
               "ViewState": "AQIAAFcAAAAAAAAAAAAAAGwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-30T15:54:37.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T15:54:37.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 22,
               "Title": "random",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\random",
               "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\random",
@@ -271,12 +262,11 @@
               "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\random",
               "ViewState": "AQIAAA4LAAAAAAAAAAAlwCcLAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-01T05:31:45.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-01T05:31:45.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Affine.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
               "RelativeDocumentMoniker": "SDL_Project\\Affine.h",
@@ -284,12 +274,11 @@
               "RelativeToolTip": "SDL_Project\\Affine.h",
               "ViewState": "AQIAABgAAAAAAAAAAAAqwEgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T06:41:25.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-02T06:41:25.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "CloudMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\CloudMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\CloudMesh.h",
@@ -297,12 +286,11 @@
               "RelativeToolTip": "SDL_Project\\CloudMesh.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-30T13:50:20.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T13:50:20.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
@@ -310,12 +298,11 @@
               "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
               "ViewState": "AQIAAEsHAAAAAAAAAAAlwGQHAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-30T14:00:06.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T14:00:06.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "projection_test.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\projection_test.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\projection_test.cpp",
@@ -327,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "DT285_Drawing.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_Drawing.h",
@@ -339,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "frustum_mesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\frustum_mesh.cpp",
@@ -351,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "Shader.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Shader.h",
               "RelativeDocumentMoniker": "SDL_Project\\Shader.h",
@@ -363,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "vertex_shader.glsl",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl",
               "RelativeDocumentMoniker": "SDL_Project\\vertex_shader.glsl",
@@ -375,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "SnubDodecMesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.cpp",
@@ -387,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "SnubDodecMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.h",
@@ -399,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "sphere_wireframe.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_wireframe.cpp",
@@ -411,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "sphere_solid.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_solid.cpp",
