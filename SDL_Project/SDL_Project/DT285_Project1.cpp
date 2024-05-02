@@ -85,14 +85,14 @@ void Init(void) {
     cam3 = Camera(O + 2 * ex - 2 * ez, -ex, ey, 0.5f * PI, aspect, 0.01f, 10);
 
 
-    cow = new CowMesh("../Obj/cow.obj");
+    cow = new CowMesh("Obj/cow.obj");
     float cow_scale = max(cow->Dimensions().x,
         max(cow->Dimensions().y, cow->Dimensions().z));
     cow2world = Trans(cow_center - O) 
         * Scale(2.0f / cow_scale)
         * Trans(O - cow->Center());
 
-    cow2 = new CowMesh("../Obj/cow.obj");
+    cow2 = new CowMesh("Obj/cow.obj");
     float cow2_scale = cow_scale / 2.0f;
     Vector orbit_displacement(cow2_orbit_radius, 0, 0);  
     Point cow2_center = cow_center + orbit_displacement;  
@@ -103,7 +103,7 @@ void Init(void) {
         * Trans(O - cow->Center());
 
     for (int i = 0; i < 9; ++i) {
-        GrassMesh* grass = new GrassMesh("../Obj/grass.obj");
+        GrassMesh* grass = new GrassMesh("Obj/grass.obj");
         grassMeshes.push_back(grass);
         float grass_scale = max(grass->Dimensions().x,
             max(grass->Dimensions().y, grass->Dimensions().z));
@@ -136,7 +136,7 @@ void Init(void) {
     std::uniform_real_distribution<> disZ(minZ, maxZ);
 
     for (int i = 0; i < cloudNum; ++i) {
-        CloudMesh* cloud = new CloudMesh("../Obj/Cloud3.obj");
+        CloudMesh* cloud = new CloudMesh("Obj/Cloud3.obj");
         cloudMeshes.push_back(cloud);
         float cloud_scale = max(cloud->Dimensions().x,
             max(cloud->Dimensions().y, cloud->Dimensions().z));

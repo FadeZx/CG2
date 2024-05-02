@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Capt\\CG2\\SDL_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_DrawingCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_Project1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_DrawingCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ObjFileReader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -103,17 +103,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DT285_Project1.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_Project1.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp",
               "RelativeToolTip": "SDL_Project\\DT285_Project1.cpp",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAAAEwAAAApAAAA",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAAAJEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-27T13:29:28.561Z",
               "IsPinned": true,
@@ -121,13 +121,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DT285_DrawingCam.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_DrawingCam.h",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
               "RelativeToolTip": "SDL_Project\\DT285_DrawingCam.h",
-              "ViewState": "AQIAALMAAAAAAAAAAAAAALYAAAA8AAAA",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAAALYAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-01T14:10:49.82Z",
               "IsPinned": true,
@@ -167,10 +167,11 @@
               "RelativeDocumentMoniker": "SDL_Project\\ObjFileReader.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ObjFileReader.cpp",
               "RelativeToolTip": "SDL_Project\\ObjFileReader.cpp",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAqwFAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-27T15:15:07.534Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
