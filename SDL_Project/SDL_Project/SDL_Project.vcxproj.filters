@@ -39,10 +39,13 @@
     <ClCompile Include="FillTriangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DT285_Project1.cpp">
+    <ClCompile Include="ObjFileReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ObjFileReader.cpp">
+    <ClCompile Include="ClipTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Clip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -90,6 +93,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CloudMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Clip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HalfSpace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

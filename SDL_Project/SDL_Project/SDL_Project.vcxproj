@@ -132,8 +132,9 @@
   <ItemGroup>
     <ClCompile Include="Affine.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Clip.cpp" />
+    <ClCompile Include="ClipTest.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
-    <ClCompile Include="DT285_Project1.cpp" />
     <ClCompile Include="FillTriangle.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
     <ClCompile Include="ObjFileReader.cpp" />
@@ -144,12 +145,14 @@
   <ItemGroup>
     <ClInclude Include="Affine.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Clip.h" />
     <ClInclude Include="CloudMesh.h" />
     <ClInclude Include="CowMesh.h" />
     <ClInclude Include="CubeMesh.h" />
     <ClInclude Include="DT285_DrawingCam.h" />
     <ClInclude Include="FrustumMesh.h" />
     <ClInclude Include="GrassMesh.h" />
+    <ClInclude Include="HalfSpace.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="ObjFileReader.h" />
     <ClInclude Include="Projection.h" />

@@ -22,12 +22,14 @@
 using namespace std;
 
 
-// global data (ugh)
-int width = 500, height = 500;
-const char* name = "DT285 - Projection";
-float time_last;
-int mouse_prev_x = 0, mouse_prev_y = 0,
-mouse_curr_x = 0, mouse_curr_y = 0;
+int width = 600, height = 600;
+const char* name = "Final Project First Draft";
+double time_last;
+double current_time;
+int frame_count;
+double frame_time;
+bool should_close = false;
+SDL_Window* window;
 
 const Point O(0, 0, 0);
 const Vector ex(1, 0, 0),
@@ -57,7 +59,6 @@ float cow2_orbit_radius = 2.0f;
 float orbit_speed = PI / 5.0f;
 bool use_cam1 = true, use_cam2 = false,
 draw_solid = false;
-bool should_close = false;
 int currentCamera = 1;
 
 
@@ -208,9 +209,21 @@ void Init(void) {
 
 
 void Draw(void) {
-    double t = float(SDL_GetTicks() / 1000.0f);
-    double dt = t - time_last;
+    float t = float(SDL_GetTicks() / 1000.0f);
+    float dt = t - time_last;
     time_last = t;
+
+    // frame rate
+    ++frame_count;
+    frame_time += dt;
+    if (frame_time >= 0.5) {
+        double fps = frame_count / frame_time;
+        frame_count = 0;
+        frame_time = 0;
+        stringstream ss;
+        ss << name << " [fps=" << int(fps) << "]";
+        SDL_SetWindowTitle(window, ss.str().c_str());
+    }
 
     // Clear the screen
     glClearColor(0.796, 0.945, 1, 0); // Soft cyan background
@@ -381,7 +394,7 @@ void Resized(int W, int H) {
 
 int main(int argc, char* argv[]) {
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_Window* window = SDL_CreateWindow(name, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
+    window = SDL_CreateWindow(name, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
     SDL_GLContext context = SDL_GL_CreateContext(window);
     Resized(width, height);
     // GLEW
