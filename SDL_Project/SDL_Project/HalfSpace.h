@@ -1,37 +1,48 @@
-class HalfSpace {
-public:
-    float a, b, c, d; // Plane equation Ax + By + Cz + D = 0
+#ifndef DT285_HALFSPACE
+#define DT285_HALFSPACE
 
-    // Default constructor
-    HalfSpace() : a(0), b(0), c(0), d(0) {}
+#include "Affine.h"
 
-    // Constructor to initialize with coefficients directly
-    HalfSpace(float A, float B, float C, float D) : a(A), b(B), c(C), d(D) {}
+// computes the dot product of the half space h, which specified by
+// its homogeneous coordinate representation and the point P.
+float dot(const Hcoords & h, const Point & P) {
+    return h.x * P.x + h.y * P.y + h.z * P.z + h.w;
+}
 
-    // Constructor that defines a plane from three points
-    HalfSpace(const Point& p1, const Point& p2, const Point& p3) {
-        Vector u = p2 - p1;
-        Vector v = p3 - p1;
-        Vector n = cross(u, v);
-        n.Normalize();
-        a = n.x;
-        b = n.y;
-        c = n.z;
-        d = -(n.x * p1.x + n.y * p1.y + n.z * p1.z);
-    }
 
-    // Constructor that defines a plane from a normal and a point
-    HalfSpace(const Vector& normal, const Point& point) {
-        Vector n = normal;
-        n.Normalize(); // Ensure the normal is unit length
-        a = n.x;
-        b = n.y;
-        c = n.z;
-        d = -(n.x * point.x + n.y * point.y + n.z * point.z);
-    }
+// computes the dot product of the half space h, which specified by
+// its homogeneous coordinate representation and the point P.
+Hcoords HalfSpace(const Vector& n, const Point& C) {
+    Vector norm = n;
+    norm.Normalize();  // Ensure the vector is normalized
+    float d = -(norm.x * C.x + norm.y * C.y + norm.z * C.z);
+    return Hcoords(norm.x, norm.y, norm.z, d);
+}
 
-    // Access the plane equation as an Hcoords (for easier calculations)
-    Hcoords equation() const {
-        return Hcoords(a, b, c, d);
-    }
+// computes the homogeneous coordinate representation of the half space
+// with outwardly pointing surface normal vector n and whose boundary contains the point C.
+Hcoords HalfSpace(const Point& A, const Point& B, const Point& C, const Point& P) {
+    Vector u = B - A;
+    Vector v = C - A;
+    Vector norm = cross(u, v);
+    norm.Normalize();
+    float d = -(norm.x * A.x + norm.y * A.y + norm.z * A.z);
+    Hcoords plane = Hcoords(norm.x, norm.y, norm.z, d);
+    return plane;
+}
+
+struct Interval {
+	float bgn, end;
+	Interval(float a = 0, float b = 1) : bgn(a), end(b) { }
+	bool IsEmpty(void) const { return bgn > end; }
 };
+
+
+// computes the intersection interval I = [a, b] that corresponds to the intersection of the half space h
+// and the line segment PQ with endpoints PQ.
+// If the intersection is empty then return empty Interval (bgn > end)
+Interval ClipSegment(const Hcoords& h, const Point& P, const Point& Q);
+
+
+#endif
+

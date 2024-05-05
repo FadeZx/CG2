@@ -56,7 +56,7 @@ bool Clip::operator()(Point& A, Point& B) {
     if (t0 > t1) return false;  // No intersection
 
     A = A + t0 * D;  // Calculate new A
-    B = A + t1 * D;  // Calculate new B
+    B = A + (t1 - t0) * D;
     return true;
 }
 
