@@ -5,7 +5,7 @@
 
 #include <vector>
 #include "Affine.h"
-
+#include "HalfSpace.h"
 
 class Clip {
   public:

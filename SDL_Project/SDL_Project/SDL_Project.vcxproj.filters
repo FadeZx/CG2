@@ -42,10 +42,10 @@
     <ClCompile Include="ObjFileReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClipTest.cpp">
+    <ClCompile Include="Clip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Clip.cpp">
+    <ClCompile Include="ClipTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

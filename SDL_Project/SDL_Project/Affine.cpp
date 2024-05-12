@@ -83,6 +83,10 @@ float dot(const Vector& u, const Vector& v) {
     return u.x * v.x + u.y * v.y + u.z * v.z;
 }
 
+float dot(const Hcoords& h, const Vector& v) {
+    return h.x * v.x + h.y * v.y + h.z * v.z + h.w;
+}
+
 float abs(const Vector& v) {
     return std::sqrt(dot(v, v));
 }
