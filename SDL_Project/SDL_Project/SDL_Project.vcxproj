@@ -109,7 +109,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)external\SDL\lib\x64;$(SolutionDir)external\glew-2.1.0\lib\Release\x64;C:\Capt\CG2\SDL_Project\external\HalfSpace;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)external\SDL\lib\x64;$(SolutionDir)external\glew-2.1.0\lib\Release\x64;$(SolutionDir)external\HalfSpace;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;opengl32.lib;HalfSpace.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

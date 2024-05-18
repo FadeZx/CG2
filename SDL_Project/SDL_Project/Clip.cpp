@@ -30,70 +30,68 @@ Clip::Clip(int n, const Hcoords* clip_to_hspaces) {
 }
 
 bool Clip::operator()(Point& A, Point& B) {
-    float t0 = 0.0f, t1 = 1.0f;
-    Vector D = B - A;  // Direction vector of the line segment
+    float t0 = 0.0, t1 = 1.0;
+    Vector direction = B - A;
 
-    for (const auto& plane : hspaces) {
+    for (const Hcoords& plane : hspaces) {
         float numerator = dot(Vector(plane.x, plane.y, plane.z), Vector(A.x, A.y, A.z)) + plane.w;
-        float denominator = dot(Vector(plane.x, plane.y, plane.z), D);
+        float denominator = dot(Vector(plane.x, plane.y, plane.z), direction);
 
-        if (denominator == 0) {
-            if (numerator > 0) return false;  // Line is parallel and outside
+        if (fabs(denominator) < 1e-6) {  // Consider an epsilon for floating point precision issues
+            if (numerator > 0) return false;  // The segment is entirely outside the plane
+            continue;  // The segment is parallel to the plane and lies inside
+        }
+
+        float t = -numerator / denominator;
+        if (denominator > 0) {
+            if (t > t1) return false;
+            t0 = std::max(t0, t);
         }
         else {
-            float t = -numerator / denominator;
-            if (denominator > 0) {
-                if (t > t1) return false;  // No intersection
-                t0 = std::max(t0, t);
-            }
-            else {
-                if (t < t0) return false;  // No intersection
-                t1 = std::min(t1, t);
-            }
+            if (t < t0) return false;
+            t1 = std::min(t1, t);
         }
     }
 
-    if (t0 > t1) return false;  // No intersection
+    if (t0 > t1) return false;
 
-    A = A + t0 * D;  // Calculate new A
-    B = A + (t1 - t0) * D;
+    A = A + t0 * direction;
+    B = A + (t1 - t0) * direction;
     return true;
 }
 
-bool Clip::operator()(std::vector<Point>& verts_to_clip) {
-    std::vector<Point> input = verts_to_clip;
-    std::vector<Point> output;
 
-    for (const Hcoords& clipPlane : hspaces) {
+bool Clip::operator()(std::vector<Point>& verts_to_clip) {
+    if (verts_to_clip.size() < 3) return false;  // Not a polygon
+
+    std::vector<Point> input = verts_to_clip, output;
+
+    for (const Hcoords& plane : hspaces) {
         if (input.empty()) return false;
 
         Point S = input.back();
-
         output.clear();
-        for (const Point& E : input) {
-            float planeDotE = dot(Vector(clipPlane.x, clipPlane.y, clipPlane.z), Vector(E.x, E.y, E.z)) + clipPlane.w;
-            float planeDotS = dot(Vector(clipPlane.x, clipPlane.y, clipPlane.z), Vector(S.x, S.y, S.z)) + clipPlane.w;
 
-            if (planeDotE < 0) {  // E is inside
-                if (planeDotS >= 0) {
-                    Point I = intersect(S, E, clipPlane);
-                    output.push_back(I);
+        for (const Point& E : input) {
+            if (dot(Vector(plane.x, plane.y, plane.z), Vector(E.x, E.y, E.z)) + plane.w < 0) {
+                // E is inside the half-space
+                if (dot(Vector(plane.x, plane.y, plane.z), Vector(S.x, S.y, S.z)) + plane.w >= 0) {
+                    output.push_back(intersect(S, E, plane));
                 }
                 output.push_back(E);
             }
-            else if (planeDotS < 0) {  // S is inside but E is outside
-                Point I = intersect(S, E, clipPlane);
-                output.push_back(I);
+            else if (dot(Vector(plane.x, plane.y, plane.z), Vector(S.x, S.y, S.z)) + plane.w < 0) {
+                // S is inside but E is outside
+                output.push_back(intersect(S, E, plane));
             }
             S = E;
         }
+
         input = output;
     }
 
-    if (output.empty()) return false;
-
-    verts_to_clip = output;
-    return true;
+    verts_to_clip = input;
+    return !verts_to_clip.empty();
 }
 
 
