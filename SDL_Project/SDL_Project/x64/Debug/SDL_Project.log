@@ -1,2 +1,40 @@
-﻿  Clip.cpp
-  SDL_Project.vcxproj -> C:\Users\orangeduck\Documents\Capt\CGProject2\CG2\SDL_Project\x64\Debug\SDL_Project.exe
+﻿  DT285_Project1.cpp
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_DrawingCam.h(161,42): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(112,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(112,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(145,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(146,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(169,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(169,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(213,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(229,25): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(229,18): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(238,71): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(238,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(238,59): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(242,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(242,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(242,58): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(250,85): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(250,78): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(250,71): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(254,85): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(254,78): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(254,71): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(262,81): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(262,74): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(266,72): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(266,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(277,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(277,58): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(277,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(279,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(279,58): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(279,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(297,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(297,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(297,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(299,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(299,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Capt\CG2\SDL_Project\SDL_Project\DT285_Project1.cpp(299,47): warning C4305: 'argument': truncation from 'double' to 'float'
+  SDL_Project.vcxproj -> C:\Capt\CG2\SDL_Project\x64\Debug\SDL_Project.exe

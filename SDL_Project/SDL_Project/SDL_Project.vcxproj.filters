@@ -45,7 +45,7 @@
     <ClCompile Include="Clip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ClipTest.cpp">
+    <ClCompile Include="DT285_Project1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

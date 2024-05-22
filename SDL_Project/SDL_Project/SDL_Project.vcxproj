@@ -133,8 +133,8 @@
     <ClCompile Include="Affine.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clip.cpp" />
-    <ClCompile Include="ClipTest.cpp" />
     <ClCompile Include="CubeMesh.cpp" />
+    <ClCompile Include="DT285_Project1.cpp" />
     <ClCompile Include="FillTriangle.cpp" />
     <ClCompile Include="FrustumMesh.cpp" />
     <ClCompile Include="ObjFileReader.cpp" />

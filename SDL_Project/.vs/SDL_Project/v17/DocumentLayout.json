@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Capt\\CG2\\SDL_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ClipTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\ClipTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\DT285_Project1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\TestCollider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|solutionrelative:SDL_Project\\TestCollider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA73922-F792-46E8-B0AD-5F4E7E199FAB}|SDL_Project\\SDL_Project.vcxproj|C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Clip.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -138,31 +142,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClipTest.cpp",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ClipTest.cpp",
-              "RelativeDocumentMoniker": "SDL_Project\\ClipTest.cpp",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ClipTest.cpp",
-              "RelativeToolTip": "SDL_Project\\ClipTest.cpp",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAC8AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T07:38:52.502Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Clip.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Clip.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\Clip.cpp",
               "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Clip.cpp",
               "RelativeToolTip": "SDL_Project\\Clip.cpp",
-              "ViewState": "AQIAADgAAAAAAAAAAAAmwC4AAAAlAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwEAAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-12T07:31:33.844Z",
               "IsPinned": true,
@@ -170,15 +160,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HalfSpace.h",
-              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\HalfSpace.h",
-              "RelativeDocumentMoniker": "SDL_Project\\HalfSpace.h",
-              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\HalfSpace.h",
-              "RelativeToolTip": "SDL_Project\\HalfSpace.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-12T07:31:41.073Z",
+              "DocumentIndex": 0,
+              "Title": "DT285_Project1.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\DT285_Project1.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Project1.cpp",
+              "RelativeToolTip": "SDL_Project\\DT285_Project1.cpp",
+              "ViewState": "AQIAANIAAAAAAAAAAAAAANkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-22T18:27:25.776Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestCollider.cpp",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\TestCollider.cpp",
+              "RelativeDocumentMoniker": "SDL_Project\\TestCollider.cpp",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\TestCollider.cpp",
+              "RelativeToolTip": "SDL_Project\\TestCollider.cpp",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAowMEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-22T18:37:43.887Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -192,7 +196,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "HalfSpace.h",
+              "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\HalfSpace.h",
+              "RelativeDocumentMoniker": "SDL_Project\\HalfSpace.h",
+              "ToolTip": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\HalfSpace.h",
+              "RelativeToolTip": "SDL_Project\\HalfSpace.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-12T07:31:41.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Affine.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\Affine.cpp",
@@ -200,12 +216,11 @@
               "RelativeToolTip": "SDL_Project\\Affine.cpp",
               "ViewState": "AQIAAIQAAAAAAAAAAAAmwLYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T07:31:25.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T07:31:25.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Clip.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Clip.h",
               "RelativeDocumentMoniker": "SDL_Project\\Clip.h",
@@ -213,12 +228,11 @@
               "RelativeToolTip": "SDL_Project\\Clip.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-12T07:39:40.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T07:39:40.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Affine.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Affine.h",
               "RelativeDocumentMoniker": "SDL_Project\\Affine.h",
@@ -226,12 +240,11 @@
               "RelativeToolTip": "SDL_Project\\Affine.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-02T06:41:25.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-02T06:41:25.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ObjFileReader.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ObjFileReader.h",
               "RelativeDocumentMoniker": "SDL_Project\\ObjFileReader.h",
@@ -243,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Clip.h",
               "DocumentMoniker": "C:\\Users\\filmm\\AppData\\Local\\Temp\\cc2a8fad-6263-49cd-b059-878217a25c7e_DT285_ProgrammingLab12.zip.c7e\\Clip.h",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\filmm\\AppData\\Local\\Temp\\cc2a8fad-6263-49cd-b059-878217a25c7e_DT285_ProgrammingLab12.zip.c7e\\Clip.h",
@@ -256,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ObjFileReader.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\ObjFileReader.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\ObjFileReader.cpp",
@@ -264,12 +277,11 @@
               "RelativeToolTip": "SDL_Project\\ObjFileReader.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-27T15:15:07.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T15:15:07.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CowMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\CowMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\CowMesh.h",
@@ -277,12 +289,11 @@
               "RelativeToolTip": "SDL_Project\\CowMesh.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-27T13:29:20.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T13:29:20.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DT285_DrawingCam.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_DrawingCam.h",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_DrawingCam.h",
@@ -290,12 +301,11 @@
               "RelativeToolTip": "SDL_Project\\DT285_DrawingCam.h",
               "ViewState": "AQIAAIYAAAAAAAAAAAAAAK8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-01T14:10:49.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T14:10:49.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CubeMesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\CubeMesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\CubeMesh.cpp",
@@ -303,12 +313,11 @@
               "RelativeToolTip": "SDL_Project\\CubeMesh.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T07:31:34.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T07:31:34.36Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "RasterUtilities.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\RasterUtilities.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\RasterUtilities.cpp",
@@ -316,12 +325,11 @@
               "RelativeToolTip": "SDL_Project\\RasterUtilities.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T07:31:31.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T07:31:31.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FrustumMesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FrustumMesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\FrustumMesh.cpp",
@@ -329,12 +337,11 @@
               "RelativeToolTip": "SDL_Project\\FrustumMesh.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T07:31:23.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T07:31:23.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FillTriangle.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\FillTriangle.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\FillTriangle.cpp",
@@ -342,12 +349,11 @@
               "RelativeToolTip": "SDL_Project\\FillTriangle.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-12T07:31:22.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T07:31:22.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Mesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Mesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\Mesh.h",
@@ -359,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Camera.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\Camera.cpp",
@@ -371,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Camera.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Camera.h",
               "RelativeDocumentMoniker": "SDL_Project\\Camera.h",
@@ -383,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "SnubDodecMesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.cpp",
@@ -391,12 +397,11 @@
               "RelativeToolTip": "SDL_Project\\SnubDodecMesh.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-16T14:12:10.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-16T14:12:10.725Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "fragment_shader.glsl",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\fragment_shader.glsl",
               "RelativeDocumentMoniker": "SDL_Project\\fragment_shader.glsl",
@@ -408,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Projection.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Projection.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\Projection.cpp",
@@ -420,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Camera.h",
               "DocumentMoniker": "C:\\Users\\filmm\\Downloads\\Camera.h",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\filmm\\Downloads\\Camera.h",
@@ -432,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "random",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\random",
               "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\random",
@@ -444,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CloudMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\CloudMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\CloudMesh.h",
@@ -456,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
@@ -468,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "projection_test.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\projection_test.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\projection_test.cpp",
@@ -480,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "DT285_Drawing.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\DT285_Drawing.h",
               "RelativeDocumentMoniker": "SDL_Project\\DT285_Drawing.h",
@@ -492,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "frustum_mesh.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\frustum_mesh.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\frustum_mesh.cpp",
@@ -504,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Shader.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\Shader.h",
               "RelativeDocumentMoniker": "SDL_Project\\Shader.h",
@@ -516,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "vertex_shader.glsl",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\vertex_shader.glsl",
               "RelativeDocumentMoniker": "SDL_Project\\vertex_shader.glsl",
@@ -528,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "SnubDodecMesh.h",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\SnubDodecMesh.h",
               "RelativeDocumentMoniker": "SDL_Project\\SnubDodecMesh.h",
@@ -540,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "sphere_wireframe.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_wireframe.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_wireframe.cpp",
@@ -552,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "sphere_solid.cpp",
               "DocumentMoniker": "C:\\Capt\\CG2\\SDL_Project\\SDL_Project\\sphere_solid.cpp",
               "RelativeDocumentMoniker": "SDL_Project\\sphere_solid.cpp",
